@@ -1,0 +1,15 @@
+.mixed h1{
+    color: blue
+}
+
+.mixed p{
+    color: black
+}
+
+.mixed h4 {
+    color: rgb(204, 30, 30)
+}
+
+.mixed{
+    list-style-type: none;
+}
