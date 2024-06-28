@@ -15,8 +15,13 @@ import {
     nameDragons,
     nameHistory,
     nameLaunchpads,
-    namePayloads
+    namePayloads,
+    nameRoadster
 } from "./title.js";
+
+import{
+    getRoadster
+} from "../modules/roadster.js"
 
 import{
     getAllPayloads,
@@ -853,4 +858,11 @@ export const paginationPayloads = async(page=1, limit=3)=>{
     let [back, a1,a2,a3, next] = div.children
     a1.click();
     return div;
+}
+
+export const paginationRoadster = async() => {
+    let data = await getRoadster()
+    await clear()
+
+    await nameRoadster(data.name);
 }
