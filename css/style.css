@@ -38,7 +38,7 @@ body {
     /* background: red; */
     color: var(--color--five);
     height: 10vh;
-    font-size: 2.3rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,6 +138,7 @@ body {
 .item__progress__bar {
     color: var(--color--five);
     display: flex;
+    margin-left: 4.5vw;
     justify-content: center;
     text-align: center;
     align-items: center;

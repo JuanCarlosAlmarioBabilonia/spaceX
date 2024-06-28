@@ -9,8 +9,14 @@ import {
     nameLaunches,
     nameCapsules,
     nameCores,
-    nameLandpads
+    nameLandpads,
+    nameShips
 } from "./title.js";
+
+import{
+    getAllShips,
+    getIdShips
+} from "../modules/ship.js"
 
 import{
     getAllCores,
@@ -509,6 +515,65 @@ export const paginationLandpads = async(page=1, limit=3)=>{
     end.innerHTML = "&raquo;";
     end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
     end.addEventListener("click", getIDLandpads)
+    div.appendChild(end);
+    console.log(div);
+    let [back, a1,a2,a3, next] = div.children
+    a1.click();
+    return div;
+}
+
+// Apartado Ships
+
+const getIDShips = async (e) => {
+    e.preventDefault();
+    if(e.target.dataset.page){
+        let paginacion = document.querySelector("#paginacion");
+        paginacion.innerHTML = ""
+        paginacion.append(await paginationShips(Number(e.target.dataset.page)))
+        setTimeout(() => {
+            let paginacion = document.querySelector("#paginacion");
+            let a1 = paginacion.children[0].children[1]
+            
+            a1.click();
+        }, 200);
+    }
+    e.target.classList.add('activo');
+
+    let ship = await getIdShips(e.target.id);
+    console.log(ship);
+
+    await nameShips(ship.name);
+
+};
+
+export const paginationShips = async(page=1, limit=3)=>{  
+     
+    let {docs, pagingCounter, totalPages, nextPage} = await getAllShips(page, limit)
+
+    let div = document.createElement("div");
+    div.classList.add("buttom__paginacion")
+
+    
+    let start = document.createElement("a");
+    start.setAttribute("href","#");
+    start.innerHTML = "&laquo";
+    start.setAttribute("data-page", (page==1) ? totalPages : page-1)
+    start.addEventListener("click", getIDShips)
+    div.appendChild(start);
+    docs.forEach((val,id) => {
+        let a = document.createElement("a");
+        a.setAttribute("href","#");
+        a.id = val.id;
+        a.textContent = pagingCounter;
+        a.addEventListener("click", getIDShips)
+        div.appendChild(a);
+        pagingCounter++
+    });
+    let end = document.createElement("a");
+    end.setAttribute("href","#");
+    end.innerHTML = "&raquo;";
+    end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
+    end.addEventListener("click", getIDShips)
     div.appendChild(end);
     console.log(div);
     let [back, a1,a2,a3, next] = div.children
