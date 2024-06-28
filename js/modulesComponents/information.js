@@ -116,3 +116,129 @@ export const informationWebRocket = async(wikipedia)=>{
     //     </div>
     // </div>
 }
+
+
+// INFORMACION CAPSULES
+
+export const capsulesIdPage  = async(id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/cohete.svg")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:"
+    let small = document.createElement('small');
+    small.textContent = id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+}
+
+export const capsulestypePage  = async(type)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/cohete.svg")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Type:"
+    let small = document.createElement('small');
+    small.textContent = type
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+}
+
+export const capsulesDescriptionPage  = async(status)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/cohete.svg")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Status:"
+    let small = document.createElement('small');
+    small.textContent = status
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+}
+
+export const capsulesUpdatePage  = async(last_update)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/cohete.svg")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Last update:"
+    let small = document.createElement('small');
+    small.textContent = last_update
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+}
+
+// export const capsulesSerialPage  = async(serial)=>{
+//     let div = document.createElement('div');
+//     div.classList.add('description__container')
+//     let divFirst = document.createElement('div');  
+//     let divLast = document.createElement('div');
+//     let h3 = document.createElement('h3');
+//     h3.textContent = "Serial:"
+//     let small = document.createElement('small');
+//     small.textContent = serial
+//     divLast.append(h3, small);
+//     div.append(divFirst, divLast);
+
+//     return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+// }
+
+// export const capsulesReusePage  = async(reuse_count)=>{
+//     let div = document.createElement('div');
+//     div.classList.add('description__container')
+//     let divFirst = document.createElement('div'); 
+//     let divLast = document.createElement('div');
+//     let h3 = document.createElement('h3');
+//     h3.textContent = "Reuse cont:"
+//     let small = document.createElement('small');
+//     small.textContent = reuse_count
+//     divLast.append(h3, small);
+//     div.append(divFirst, divLast);
+
+//     return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+// }
+

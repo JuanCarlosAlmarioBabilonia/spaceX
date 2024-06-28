@@ -91,7 +91,13 @@ import {
     informationRockets,
     informationLaunchCostRocket,
     informationFirstFlightRocket,
-    informationWebRocket
+    informationWebRocket,
+    capsulesIdPage,
+    capsulestypePage,
+    capsulesDescriptionPage,
+    capsulesUpdatePage
+    // capsulesSerialPage,
+    // capsulesReusePage
 } from "./information.js";
 
 
@@ -272,8 +278,100 @@ const getIdCap = async(e)=>{
     console.log(capsules);
   
     await nameCapsules(capsules.serial);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let capsulesIdPageElement = await capsulesIdPage(capsules.id);
+    description__item.append(capsulesIdPageElement);
+
+    let capsulesTypePageElement = await capsulestypePage(capsules.type);
+    description__item.append(capsulesTypePageElement);
+
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let capsulesStatusPageElement = await capsulesDescriptionPage(capsules.status);
+    information__2.append(capsulesStatusPageElement);
+
+
+    let sectionImage = document.querySelector("#section__information__1");
+
+    let img2 = document.createElement("img");
+    img2.setAttribute("src", "storage/img/icons/co.webp"); // Cambia la ruta de la imagen
+    img2.classList.add("imagen-paginacion-roadster");
+    img2.style.position = "absolute";
+    img2.style.top = "300px"; // Ajusta la posición vertical de la segunda imagen
+    img2.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
+    img2.style.width = "445px"; // Ajusta el ancho de la segunda imagen
+    img2.style.height = "350px";
+    img2.style.marginTop = "10px";
+    img2.style.marginLeft = "300px";
+    img2.style.borderRadius = "10%";
+    sectionImage.appendChild(img2);
+
+    console.log("Segunda imagen añadida:", img2);
+
+
+    let information__table__1 = document.querySelector("#information__table__1");
+    information__table__1.innerHTML = "";
+    let h3 = document.createElement("h3");
+    h3.textContent = "Capsule information";
+    let hr = document.createElement("hr");
+    information__table__1.append(h3, hr);
+  
+    let divp = document.createElement("div");
+    divp.classList.add("table__container__1");
+  
+    let div1 = document.createElement("div");
+    let span1 = document.createElement("span");
+    span1.textContent = "Type";
+    let strong1 = document.createElement("strong");
+    strong1.textContent = `${capsules.type}`;
+    div1.append(span1, strong1);
+  
+    let div2 = document.createElement("div");
+    let span2 = document.createElement("span");
+    span2.textContent = "Reuse count";
+    let strong2 = document.createElement("strong");
+    strong2.textContent = `${capsules.reuse_count}`;
+    div2.append(span2, strong2);
+  
+    divp.append(div1, div2);
+    information__table__1.append(divp);
+  
+    let information__table__2 = document.querySelector("#information__table__2");
+    information__table__2.innerHTML = "";
+    let h4 = document.createElement("h3");
+    h4.textContent = "Capsule information 2";
+    let hr1 = document.createElement("hr");
+    information__table__2.append(h4, hr1);
+  
+    let divs= document.createElement("div");
+    divs.classList.add("table__container__2");
+  
+    let div3 = document.createElement("div");
+    let span3 = document.createElement("span");
+    span3.textContent = "Water landings";
+    let strong3= document.createElement("strong");
+    strong3.textContent = `${capsules.water_landings}`;
+    div3.append(span3, strong3);
+  
+    let div4 = document.createElement("div");
+    let span4 = document.createElement("span");
+    span4.textContent = "Land landings";
+    let strong4 = document.createElement("strong");
+    strong4.textContent = `${capsules.land_landings}`;
+    div4.append(span4, strong4);
+  
+    divs.append(div3, div4);
+    information__table__2.append(divs)
+
 };
 
+
+  
 
 export const paginationCapsules = async(page=1, limit=5)=>{  
      
@@ -321,8 +419,6 @@ export const paginationCapsules = async(page=1, limit=5)=>{
 
 
 // INFORMACION CREW
-
-
 const getAllIDCrew = async (e) => {
     e.preventDefault();
     if(e.target.dataset.page){

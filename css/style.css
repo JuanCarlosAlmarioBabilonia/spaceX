@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 
-    font-family: "Roboto-Regular";
+    font-family: "Montserrat";
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-    background-color: var(--color--five);
+    background-color: var(--color--two);
 }
 
 *::-webkit-scrollbar-track:hover,
@@ -31,7 +31,7 @@ body {
 *::-webkit-scrollbar-thumb {
 
     border: 1px solid var(--color--five);
-    background-color: var(--color--one--rgba);
+    background-color: var(--color--one);
 }
 
 .header__title {
@@ -142,12 +142,12 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background: radial-gradient(
         closest-side, 
-        #1d1f38 85%, 
+        var(--color--five) 85%, 
         transparent 85% 100%), 
         conic-gradient(var(--color--three) 
         80%, 
@@ -322,6 +322,7 @@ body {
     display: flex; 
     justify-content: center;
     grid-template-areas: ". footer__menu .";
+    margin-left: -5vw;
 }
 
 .footer ul {
@@ -420,7 +421,7 @@ body {
 progress[value] {
     --color: var(--color--three);
     --background: var(--color--one--rgb);
-    background: var(--background);
+    background: var(--color--two);
 }
 
 
