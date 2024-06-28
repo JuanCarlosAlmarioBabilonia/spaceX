@@ -275,7 +275,7 @@ const getIdCap = async(e)=>{
 };
 
 
-export const paginationCapsules = async(page=1, limit=4)=>{  
+export const paginationCapsules = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllCapsules(page, limit)
 
@@ -345,7 +345,7 @@ const getAllIDCrew = async (e) => {
     
 };
 
-export const paginationCrew = async(page=1, limit=3)=>{  
+export const paginationCrew = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllCrew(page, limit)
 
@@ -407,7 +407,7 @@ const getIDLaunches = async (e) => {
 };
 
 
-export const paginationLaunches = async(page=1, limit=3)=>{  
+export const paginationLaunches = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllLaunches(page, limit)
 
@@ -467,7 +467,7 @@ const getIDCores = async (e) => {
 
 };
 
-export const paginationCores = async(page=1, limit=3)=>{  
+export const paginationCores = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllCores(page, limit)
 
@@ -527,7 +527,7 @@ const getIDLandpads = async (e) => {
 
 };
 
-export const paginationLandpads = async(page=1, limit=3)=>{  
+export const paginationLandpads = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllLandpads(page, limit)
 
@@ -586,7 +586,7 @@ const getIDShips = async (e) => {
 
 };
 
-export const paginationShips = async(page=1, limit=3)=>{  
+export const paginationShips = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllShips(page, limit)
 
@@ -713,7 +713,7 @@ const getIDHistory = async (e) => {
 
 };
 
-export const paginationHistory = async(page=1, limit=3)=>{  
+export const paginationHistory = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllHistory(page, limit)
 
@@ -772,7 +772,7 @@ const getIDLaunchpads = async (e) => {
 
 };
 
-export const paginationLaunchpads = async(page=1, limit=3)=>{  
+export const paginationLaunchpads = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllLaunchpads(page, limit)
 
@@ -899,7 +899,7 @@ const getIDStarlink = async (e) => {
 
 };
 
-export const paginationStarlink = async(page=1, limit=3)=>{  
+export const paginationStarlink = async(page=1, limit=5)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllStarlink(page, limit)
 
