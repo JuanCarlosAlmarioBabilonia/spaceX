@@ -14,8 +14,14 @@ import {
     nameCompany,
     nameDragons,
     nameHistory,
-    nameLaunchpads
+    nameLaunchpads,
+    namePayloads
 } from "./title.js";
+
+import{
+    getAllPayloads,
+    getIdPayloads
+} from "../modules/payloads.js"
 
 import{
     getAllLaunchpads,
@@ -783,6 +789,65 @@ export const paginationLaunchpads = async(page=1, limit=3)=>{
     end.innerHTML = "&raquo;";
     end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
     end.addEventListener("click", getIDLaunchpads)
+    div.appendChild(end);
+    console.log(div);
+    let [back, a1,a2,a3, next] = div.children
+    a1.click();
+    return div;
+}
+
+// Apartado payloads
+
+const getIDPayloads = async (e) => {
+    e.preventDefault();
+    if(e.target.dataset.page){
+        let paginacion = document.querySelector("#paginacion");
+        paginacion.innerHTML = ""
+        paginacion.append(await paginationPayloads(Number(e.target.dataset.page)))
+        setTimeout(() => {
+            let paginacion = document.querySelector("#paginacion");
+            let a1 = paginacion.children[0].children[1]
+            
+            a1.click();
+        }, 200);
+    }
+    e.target.classList.add('activo');
+
+    let payloads = await getIdPayloads(e.target.id);
+    console.log(payloads);
+
+    await namePayloads(payloads.name);
+
+};
+
+export const paginationPayloads = async(page=1, limit=3)=>{  
+     
+    let {docs, pagingCounter, totalPages, nextPage} = await getAllPayloads(page, limit)
+
+    let div = document.createElement("div");
+    div.classList.add("buttom__paginacion")
+
+    
+    let start = document.createElement("a");
+    start.setAttribute("href","#");
+    start.innerHTML = "&laquo";
+    start.setAttribute("data-page", (page==1) ? totalPages : page-1)
+    start.addEventListener("click", getIDPayloads)
+    div.appendChild(start);
+    docs.forEach((val,id) => {
+        let a = document.createElement("a");
+        a.setAttribute("href","#");
+        a.id = val.id;
+        a.textContent = pagingCounter;
+        a.addEventListener("click", getIDPayloads)
+        div.appendChild(a);
+        pagingCounter++
+    });
+    let end = document.createElement("a");
+    end.setAttribute("href","#");
+    end.innerHTML = "&raquo;";
+    end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
+    end.addEventListener("click", getIDPayloads)
     div.appendChild(end);
     console.log(div);
     let [back, a1,a2,a3, next] = div.children
