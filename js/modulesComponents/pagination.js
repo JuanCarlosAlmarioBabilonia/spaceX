@@ -11,7 +11,8 @@ import {
     nameCores,
     nameLandpads,
     nameShips,
-    nameCompany
+    nameCompany,
+    nameDragons
 } from "./title.js";
 
 import{
@@ -22,6 +23,11 @@ import{
     getAllShips,
     getIdShips
 } from "../modules/ship.js"
+
+import{
+    getAllDragons,
+    getIdDragons
+} from "../modules/dragons.js"
 
 import{
     getAllCores,
@@ -586,9 +592,70 @@ export const paginationShips = async(page=1, limit=3)=>{
     return div;
 }
 
+// Apartado Company
+
 export const paginationCompany = async() => {
     let data = await getCompany()
     await clear()
 
     await nameCompany(data.name);
+}
+
+// Apartado DRagons
+
+const getIDDragons = async (e) => {
+    e.preventDefault();
+    if(e.target.dataset.page){
+        let paginacion = document.querySelector("#paginacion");
+        paginacion.innerHTML = ""
+        paginacion.append(await paginationDragons(Number(e.target.dataset.page)))
+        setTimeout(() => {
+            let paginacion = document.querySelector("#paginacion");
+            let a1 = paginacion.children[0].children[1]
+            
+            a1.click();
+        }, 200);
+    }
+    e.target.classList.add('activo');
+
+    let dragons = await getIdDragons(e.target.id);
+    console.log(dragons);
+
+    await nameDragons(dragons.name);
+
+};
+
+export const paginationDragons = async(page=1, limit=3)=>{  
+     
+    let {docs, pagingCounter, totalPages, nextPage} = await getAllDragons(page, limit)
+
+    let div = document.createElement("div");
+    div.classList.add("buttom__paginacion")
+
+    
+    let start = document.createElement("a");
+    start.setAttribute("href","#");
+    start.innerHTML = "&laquo";
+    start.setAttribute("data-page", (page==1) ? totalPages : page-1)
+    start.addEventListener("click", getIDDragons)
+    div.appendChild(start);
+    docs.forEach((val,id) => {
+        let a = document.createElement("a");
+        a.setAttribute("href","#");
+        a.id = val.id;
+        a.textContent = pagingCounter;
+        a.addEventListener("click", getIDDragons)
+        div.appendChild(a);
+        pagingCounter++
+    });
+    let end = document.createElement("a");
+    end.setAttribute("href","#");
+    end.innerHTML = "&raquo;";
+    end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
+    end.addEventListener("click", getIDDragons)
+    div.appendChild(end);
+    console.log(div);
+    let [back, a1,a2,a3, next] = div.children
+    a1.click();
+    return div;
 }
