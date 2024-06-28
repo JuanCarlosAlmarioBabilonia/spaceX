@@ -12,7 +12,8 @@ import {
     paginationHistory,
     paginationLaunchpads,
     paginationPayloads,
-    paginationRoadster
+    paginationRoadster,
+    paginationStarlink
 } from "./modulesComponents/pagination.js";
 
 let footerSelect = async(e, id)=>{
@@ -130,6 +131,14 @@ roadster.addEventListener("click", async(e)=>{
     let paginacion = document.querySelector("#paginacion");
     paginacion.innerHTML = ""
     paginacion.append(await paginationRoadster())
+})
+
+let starlink = document.querySelector("#starlink")
+starlink.addEventListener("click", async(e)=>{
+    await footerSelect(e, starlink)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationStarlink())
 })
 
 rocket.click();

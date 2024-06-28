@@ -16,8 +16,14 @@ import {
     nameHistory,
     nameLaunchpads,
     namePayloads,
-    nameRoadster
+    nameRoadster,
+    nameStarlink
 } from "./title.js";
+
+import{
+    getAllStarlink,
+    getIdStarlink
+} from "../modules/starlink.js"
 
 import{
     getRoadster
@@ -860,9 +866,70 @@ export const paginationPayloads = async(page=1, limit=3)=>{
     return div;
 }
 
+// Apartado Roadster
+
 export const paginationRoadster = async() => {
     let data = await getRoadster()
     await clear()
 
     await nameRoadster(data.name);
+}
+
+// Apartado payloads
+
+const getIDStarlink = async (e) => {
+    e.preventDefault();
+    if(e.target.dataset.page){
+        let paginacion = document.querySelector("#paginacion");
+        paginacion.innerHTML = ""
+        paginacion.append(await paginationStarlink(Number(e.target.dataset.page)))
+        setTimeout(() => {
+            let paginacion = document.querySelector("#paginacion");
+            let a1 = paginacion.children[0].children[1]
+            
+            a1.click();
+        }, 200);
+    }
+    e.target.classList.add('activo');
+
+    let starlink = await getIdStarlink(e.target.id);
+    console.log(starlink);
+
+    await nameStarlink(starlink.spaceTrack.OBJECT_NAME);
+
+};
+
+export const paginationStarlink = async(page=1, limit=3)=>{  
+     
+    let {docs, pagingCounter, totalPages, nextPage} = await getAllStarlink(page, limit)
+
+    let div = document.createElement("div");
+    div.classList.add("buttom__paginacion")
+
+    
+    let start = document.createElement("a");
+    start.setAttribute("href","#");
+    start.innerHTML = "&laquo";
+    start.setAttribute("data-page", (page==1) ? totalPages : page-1)
+    start.addEventListener("click", getIDStarlink)
+    div.appendChild(start);
+    docs.forEach((val,id) => {
+        let a = document.createElement("a");
+        a.setAttribute("href","#");
+        a.id = val.id;
+        a.textContent = pagingCounter;
+        a.addEventListener("click", getIDStarlink)
+        div.appendChild(a);
+        pagingCounter++
+    });
+    let end = document.createElement("a");
+    end.setAttribute("href","#");
+    end.innerHTML = "&raquo;";
+    end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
+    end.addEventListener("click", getIDStarlink)
+    div.appendChild(end);
+    console.log(div);
+    let [back, a1,a2,a3, next] = div.children
+    a1.click();
+    return div;
 }
