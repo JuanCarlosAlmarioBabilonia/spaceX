@@ -10,8 +10,13 @@ import {
     nameCapsules,
     nameCores,
     nameLandpads,
-    nameShips
+    nameShips,
+    nameCompany
 } from "./title.js";
+
+import{
+    getCompany
+} from "../modules/company.js"
 
 import{
     getAllShips,
@@ -579,4 +584,11 @@ export const paginationShips = async(page=1, limit=3)=>{
     let [back, a1,a2,a3, next] = div.children
     a1.click();
     return div;
+}
+
+export const paginationCompany = async() => {
+    let data = await getCompany()
+    await clear()
+
+    await nameCompany(data.name);
 }
