@@ -464,3 +464,99 @@ export const launchesPrecisionPage  = async(date_precision)=>{
 
     return div; 
 }
+
+export const launchesWebcastPage  = async(links)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Webcast:"
+    let small = document.createElement('small');
+    divLast.append(h3, small);
+
+    let link = document.createElement('a');
+    link.textContent = "Click aqui para ver el video";
+    link.style.color = "white"; 
+    link.style.textDecoration = "underline"; 
+    link.href = links.webcast; 
+    link.style.fontSize = "14px";
+    link.target = "_blank";
+    divLast.appendChild(link);
+    
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const launchesArticlePage  = async(links)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Article:"
+    let small = document.createElement('small');
+    divLast.append(h3, small);
+
+    let link = document.createElement('a');
+    link.textContent = "Click aqui para ver el articulo";
+    link.style.color = "white"; 
+    link.style.textDecoration = "underline"; 
+    link.href = links.article; 
+    link.style.fontSize = "14px";
+    link.target = "_blank";
+    divLast.appendChild(link);
+    
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const launchesWikiPage  = async(links)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Wikipedia:"
+    let small = document.createElement('small');
+    divLast.append(h3, small);
+
+    let link = document.createElement('a');
+    link.textContent = "Click aqui para ver el articulo de wikipedia";
+    link.style.color = "white"; 
+    link.style.textDecoration = "underline"; 
+    link.href = links.wikipedia; 
+    link.style.fontSize = "14px";
+    link.target = "_blank";
+    divLast.appendChild(link);
+    
+    div.append(divFirst, divLast);
+
+    return div; 
+}

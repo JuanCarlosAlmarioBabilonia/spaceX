@@ -107,7 +107,10 @@ import {
     launchesStaticPage,
     launchesUtcPage,
     launchesLocalPage,
-    launchesPrecisionPage
+    launchesPrecisionPage,
+    launchesWebcastPage,
+    launchesArticlePage,
+    launchesWikiPage
 } from "./information.js";
 
 
@@ -322,8 +325,6 @@ const getIdCap = async(e)=>{
 
     let capsulesUpdatePageElement = await capsulesUpdatePage(capsules.last_update);
     information__2.append(capsulesUpdatePageElement);
-
-
 
     let sectionImage = document.querySelector("#section__information__1");
 
@@ -631,6 +632,19 @@ const getIDLaunches = async (e) => {
 
     let launchesPrecisionPageElement = await launchesPrecisionPage(launches.date_precision);
     description__item.append(launchesPrecisionPageElement);
+
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let launchesWebcastPageElement = await launchesWebcastPage(launches.links);
+    information__2.append(launchesWebcastPageElement);
+
+    let launchesArticlePageElement = await launchesArticlePage(launches.links);
+    information__2.append(launchesArticlePageElement);
+
+    let launchesWikiPageElement = await launchesWikiPage(launches.links);
+    information__2.append(launchesWikiPageElement);
 
 };
 
