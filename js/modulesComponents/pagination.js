@@ -112,7 +112,9 @@ import {
     launchesArticlePage,
     launchesWikiPage,
     coresIdPage,
-    coresLaunchesPage
+    coresLaunchesPage,
+    coresSerialPage,
+    coresStatusPage
 } from "./information.js";
 
 
@@ -809,6 +811,15 @@ const getIDCores = async (e) => {
 
     let coresLaunchesPageElement = await coresLaunchesPage(cores.launches);
     description__item.append(coresLaunchesPageElement);
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let coresSerialPageElement = await coresSerialPage(cores.serial);
+    information__2.append(coresSerialPageElement);
+
+    let coresStatusPageElement = await coresStatusPage(cores.status);
+    information__2.append(coresStatusPageElement);
 
 };
 
