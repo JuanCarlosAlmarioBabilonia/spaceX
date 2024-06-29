@@ -646,6 +646,55 @@ const getIDLaunches = async (e) => {
     let launchesWikiPageElement = await launchesWikiPage(launches.links);
     information__2.append(launchesWikiPageElement);
 
+
+    let information__table__1 = document.querySelector("#information__table__1");
+    information__table__1.innerHTML = "";
+    let h3 = document.createElement("h3");
+    h3.textContent = "Launches data";
+    let hr = document.createElement("hr");
+    information__table__1.append(h3, hr);
+  
+    let divp = document.createElement("div");
+    divp.classList.add("table__container__1");
+  
+    let div1 = document.createElement("div");
+    let span1 = document.createElement("span");
+    span1.textContent = "Window";
+    let strong1 = document.createElement("strong");
+    strong1.textContent = `${launches.window}`;
+    div1.append(span1, strong1);
+  
+    let div2 = document.createElement("div");
+    let span2 = document.createElement("span");
+    span2.textContent = "Flight number";
+    let strong2 = document.createElement("strong");
+    strong2.textContent = `${launches.flight_number}`;
+    div2.append(span2, strong2);
+  
+    divp.append(div1, div2);
+    information__table__1.append(divp);
+
+
+    let information__table__2 = document.querySelector("#information__table__2");
+    information__table__2.innerHTML = "";
+    let h4 = document.createElement("h3");
+    h4.textContent = "Launches details";
+    let hr1 = document.createElement("hr");
+    information__table__2.append(h4, hr1);
+  
+    let divs= document.createElement("div");
+    divs.classList.add("table__container__2");
+  
+    let div3 = document.createElement("div");
+    let span3 = document.createElement("span");
+    span3.textContent = "Details: ";
+    let strong3= document.createElement("strong");
+    strong3.textContent = `${launches.details}`;
+    div3.append(span3, strong3);
+  
+    divs.append(div3);
+    information__table__2.append(divs)
+
 };
 
 
