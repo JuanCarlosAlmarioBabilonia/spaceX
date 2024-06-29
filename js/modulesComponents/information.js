@@ -3,7 +3,8 @@ export const informationRockets = async(country, description)=>{
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute("src", "storage/img/icons/mech.svg")
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+    img.setAttribute("width", 40)
     divFirst.append(img);
     
     let divLast = document.createElement('div');
@@ -32,7 +33,8 @@ export const informationLaunchCostRocket = async(cost_per_launch)=>{
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute("src", "storage/img/icons/mech.svg")
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+    img.setAttribute("width", 40)
     divFirst.append(img);
     
     let divLast = document.createElement('div');
@@ -62,7 +64,8 @@ export const informationFirstFlightRocket = async(first_flight)=>{
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute("src", "storage/img/icons/mech.svg")
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+    img.setAttribute("width", 40)
     divFirst.append(img);
     
     let divLast = document.createElement('div');
@@ -91,7 +94,8 @@ export const informationWebRocket = async(wikipedia)=>{
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute("src", "storage/img/icons/mech.svg")
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+    img.setAttribute("width", 40)
     divFirst.append(img);
     
     let divLast = document.createElement('div');
@@ -125,7 +129,7 @@ export const capsulesIdPage  = async(id)=>{
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute("src", "storage/img/icons/cohete.svg")
+    img.setAttribute("src", "storage/img/gif/ton.webp")
 
     img.setAttribute("width", "50"); 
      img.setAttribute("height", "40");
@@ -148,7 +152,7 @@ export const capsulestypePage  = async(type)=>{
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute("src", "storage/img/icons/cohete.svg")
+    img.setAttribute("src", "storage/img/gif/ton.webp")
 
     img.setAttribute("width", "50"); 
      img.setAttribute("height", "40");
@@ -171,7 +175,7 @@ export const capsulesDescriptionPage  = async(status)=>{
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute("src", "storage/img/icons/cohete.svg")
+    img.setAttribute("src", "storage/img/gif/ton.webp")
 
     img.setAttribute("width", "50"); 
      img.setAttribute("height", "40");
@@ -194,7 +198,7 @@ export const capsulesUpdatePage  = async(last_update)=>{
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute("src", "storage/img/icons/cohete.svg")
+    img.setAttribute("src", "storage/img/gif/ton.webp")
 
     img.setAttribute("width", "50"); 
      img.setAttribute("height", "40");
@@ -212,33 +216,5 @@ export const capsulesUpdatePage  = async(last_update)=>{
     return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
 }
 
-// export const capsulesSerialPage  = async(serial)=>{
-//     let div = document.createElement('div');
-//     div.classList.add('description__container')
-//     let divFirst = document.createElement('div');  
-//     let divLast = document.createElement('div');
-//     let h3 = document.createElement('h3');
-//     h3.textContent = "Serial:"
-//     let small = document.createElement('small');
-//     small.textContent = serial
-//     divLast.append(h3, small);
-//     div.append(divFirst, divLast);
 
-//     return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
-// }
-
-// export const capsulesReusePage  = async(reuse_count)=>{
-//     let div = document.createElement('div');
-//     div.classList.add('description__container')
-//     let divFirst = document.createElement('div'); 
-//     let divLast = document.createElement('div');
-//     let h3 = document.createElement('h3');
-//     h3.textContent = "Reuse cont:"
-//     let small = document.createElement('small');
-//     small.textContent = reuse_count
-//     divLast.append(h3, small);
-//     div.append(divFirst, divLast);
-
-//     return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
-// }
 

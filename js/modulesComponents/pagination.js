@@ -96,8 +96,6 @@ import {
     capsulestypePage,
     capsulesDescriptionPage,
     capsulesUpdatePage
-    // capsulesSerialPage,
-    // capsulesReusePage
 } from "./information.js";
 
 
@@ -242,10 +240,6 @@ export const paginationRockets = async()=>{
     return div;
 }
 
-
-
-
-
 const getIdCap = async(e)=>{
     e.preventDefault();
     if(e.target.dataset.page){
@@ -280,14 +274,18 @@ const getIdCap = async(e)=>{
     let capsulesStatusPageElement = await capsulesDescriptionPage(capsules.status);
     information__2.append(capsulesStatusPageElement);
 
+    let capsulesUpdatePageElement = await capsulesUpdatePage(capsules.last_update);
+    information__2.append(capsulesUpdatePageElement);
+
+
 
     let sectionImage = document.querySelector("#section__information__1");
 
     let img2 = document.createElement("img");
-    img2.setAttribute("src", "storage/img/icons/co.webp"); // Cambia la ruta de la imagen
+    img2.setAttribute("src", "storage/img/gif/co.webp"); // Cambia la ruta de la imagen
     img2.classList.add("imagen-paginacion-roadster");
     img2.style.position = "absolute";
-    img2.style.top = "300px"; // Ajusta la posición vertical de la segunda imagen
+    img2.style.top = "220px"; // Ajusta la posición vertical de la segunda imagen
     img2.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
     img2.style.width = "445px"; // Ajusta el ancho de la segunda imagen
     img2.style.height = "350px";
@@ -296,7 +294,31 @@ const getIdCap = async(e)=>{
     img2.style.borderRadius = "10%";
     sectionImage.appendChild(img2);
 
-    console.log("Segunda imagen añadida:", img2);
+    let img3 = document.createElement("img");
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); // Cambia la ruta de la imagen
+    img3.classList.add("imagen-paginacion-roadster");
+    img3.style.position = "absolute";
+    img3.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
+    img3.style.left = "675px"; // Ajusta la posición horizontal de la segunda imagen
+    img3.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img3.style.height = "150px";
+    img3.style.marginTop = "10px";
+    img3.style.marginLeft = "300px";
+    img3.style.borderRadius = "10%";
+    sectionImage.appendChild(img3);
+
+    let img4 = document.createElement("img");
+    img4.setAttribute("src", "storage/img/gif/purple.webp"); // Cambia la ruta de la imagen
+    img4.classList.add("imagen-paginacion-roadster");
+    img4.style.position = "absolute";
+    img4.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
+    img4.style.left = "-230px"; // Ajusta la posición horizontal de la segunda imagen
+    img4.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img4.style.height = "150px";
+    img4.style.marginTop = "10px";
+    img4.style.marginLeft = "300px";
+    img4.style.borderRadius = "10%";
+    sectionImage.appendChild(img4);
 
 
     let information__table__1 = document.querySelector("#information__table__1");
@@ -329,7 +351,7 @@ const getIdCap = async(e)=>{
     let information__table__2 = document.querySelector("#information__table__2");
     information__table__2.innerHTML = "";
     let h4 = document.createElement("h3");
-    h4.textContent = "Capsule information 2";
+    h4.textContent = "Capsule landing information";
     let hr1 = document.createElement("hr");
     information__table__2.append(h4, hr1);
   
