@@ -95,7 +95,12 @@ import {
     capsulesIdPage,
     capsulestypePage,
     capsulesDescriptionPage,
-    capsulesUpdatePage
+    capsulesUpdatePage,
+    crewIdPage,
+    crewLaunchesPage,
+    crewWikiPage,
+    crewAgencyPage,
+    crewStatusPage
 } from "./information.js";
 
 
@@ -110,7 +115,8 @@ import {
 } from "./inform.js";
 
 import { 
-    imageRockets 
+    imageRockets,
+    imageCrew
 } from "./card.js";
 
 import { 
@@ -445,6 +451,69 @@ const getAllIDCrew = async (e) => {
     console.log(crew);
 
     await nameCrew(crew.name);
+    await imageCrew([{ name: crew.name, image: crew.image }]);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let crewIdPageElement = await crewIdPage(crew.id);
+    description__item.append(crewIdPageElement);
+
+    let crewLaunchesPageElement = await crewLaunchesPage(crew.launches);
+    description__item.append(crewLaunchesPageElement);
+
+    let crewWikiPageElement = await crewWikiPage(crew.wikipedia);
+    description__item.append(crewWikiPageElement);
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let crewAgencyPageElement = await crewAgencyPage(crew.agency);
+    information__2.append(crewAgencyPageElement);
+
+    let crewStatusPageElement = await crewStatusPage(crew.status);
+    information__2.append(crewStatusPageElement);
+
+    let sectionImage = document.querySelector("#section__information__1");
+
+    let img3 = document.createElement("img");
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); // Cambia la ruta de la imagen
+    img3.classList.add("imagen-paginacion-roadster");
+    img3.style.position = "absolute";
+    img3.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
+    img3.style.left = "580px"; // Ajusta la posición horizontal de la segunda imagen
+    img3.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img3.style.height = "150px";
+    img3.style.marginTop = "85px";
+    img3.style.marginLeft = "300px";
+    img3.style.borderRadius = "10%";
+    sectionImage.appendChild(img3);
+
+    let img4 = document.createElement("img");
+    img4.setAttribute("src", "storage/img/gif/purple.webp"); // Cambia la ruta de la imagen
+    img4.classList.add("imagen-paginacion-roadster");
+    img4.style.position = "absolute";
+    img4.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
+    img4.style.left = "-125px"; // Ajusta la posición horizontal de la segunda imagen
+    img4.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img4.style.height = "150px";
+    img4.style.marginTop = "85px";
+    img4.style.marginLeft = "300px";
+    img4.style.borderRadius = "10%";
+    sectionImage.appendChild(img4);
+
+    let img5 = document.createElement("img");
+    img5.setAttribute("src", "storage/img/gif/co.webp"); // Cambia la ruta de la imagen
+    img5.classList.add("imagen-paginacion-roadster");
+    img5.style.position = "absolute";
+    img5.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
+    img5.style.left = "-230px"; // Ajusta la posición horizontal de la segunda imagen
+    img5.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img5.style.height = "150px";
+    img5.style.marginTop = "-200px";
+    img5.style.marginLeft = "757px";
+    img5.style.borderRadius = "10%";
+    sectionImage.appendChild(img5);
     
 };
 

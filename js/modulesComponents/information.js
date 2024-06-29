@@ -17,16 +17,6 @@ export const informationRockets = async(country, description)=>{
 
     let description__item = document.querySelector("#description__item")
     description__item.append(div)
-
-    // <div class="description__container">
-    //     <div>
-    //         <img src="http://www.example.com">
-    //     </div>
-    //     <div>
-    //         <h3>Title</h3>
-    //         <small>Lorem ipsum dolor sit amet...</small>
-    //     </div>
-    // </div>
 }
 export const informationLaunchCostRocket = async(cost_per_launch)=>{
     let div = document.createElement('div');
@@ -48,16 +38,6 @@ export const informationLaunchCostRocket = async(cost_per_launch)=>{
 
     let description__item = document.querySelector("#description__item")
     description__item.append(div)
-
-    // <div class="description__container">
-    //     <div>
-    //         <img src="http://www.example.com">
-    //     </div>
-    //     <div>
-    //         <h3>Title</h3>
-    //         <small>Lorem ipsum dolor sit amet...</small>
-    //     </div>
-    // </div>
 }
 export const informationFirstFlightRocket = async(first_flight)=>{
     let div = document.createElement('div');
@@ -78,16 +58,6 @@ export const informationFirstFlightRocket = async(first_flight)=>{
 
     let description__item = document.querySelector("#description__item")
     description__item.append(div)
-
-    // <div class="description__container">
-    //     <div>
-    //         <img src="http://www.example.com">
-    //     </div>
-    //     <div>
-    //         <h3>Title</h3>
-    //         <small>Lorem ipsum dolor sit amet...</small>
-    //     </div>
-    // </div>
 }
 export const informationWebRocket = async(wikipedia)=>{
     let div = document.createElement('div');
@@ -109,16 +79,6 @@ export const informationWebRocket = async(wikipedia)=>{
     div.append(divFirst, divLast);
     let description__item = document.querySelector("#description__item")
     description__item.append(div)
-
-    // <div class="description__container">
-    //     <div>
-    //         <img src="http://www.example.com">
-    //     </div>
-    //     <div>
-    //         <h3>Title</h3>
-    //         <a href="#" target="_blank">Lorem</a>
-    //     </div>
-    // </div>
 }
 
 
@@ -144,7 +104,7 @@ export const capsulesIdPage  = async(id)=>{
     divLast.append(h3, small);
     div.append(divFirst, divLast);
 
-    return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+    return div;
 }
 
 export const capsulestypePage  = async(type)=>{
@@ -167,7 +127,7 @@ export const capsulestypePage  = async(type)=>{
     divLast.append(h3, small);
     div.append(divFirst, divLast);
 
-    return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+    return div;
 }
 
 export const capsulesDescriptionPage  = async(status)=>{
@@ -190,7 +150,7 @@ export const capsulesDescriptionPage  = async(status)=>{
     divLast.append(h3, small);
     div.append(divFirst, divLast);
 
-    return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+    return div;
 }
 
 export const capsulesUpdatePage  = async(last_update)=>{
@@ -213,8 +173,132 @@ export const capsulesUpdatePage  = async(last_update)=>{
     divLast.append(h3, small);
     div.append(divFirst, divLast);
 
-    return div; // Devuelve el elemento div en lugar de agregarlo directamente al DOM
+    return div; 
 }
 
+// INFORMACION CREW
+
+export const crewIdPage  = async(id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:"
+    let small = document.createElement('small');
+    small.textContent = id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const crewLaunchesPage  = async(launches)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launches:"
+    let small = document.createElement('small');
+    small.textContent = launches
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const crewWikiPage  = async(wikipedia)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Wikipedia:"
+    let small = document.createElement('small');
+    divLast.append(h3, small);
+
+    let wiki = document.createElement('a');
+    wiki.textContent = wikipedia;
+    wiki.style.color = "white"; 
+    wiki.style.textDecoration = "underline"; 
+    wiki.href = wikipedia; 
+    wiki.style.fontSize = "8px";
+    wiki.target = "_blank";
+
+    divLast.appendChild(wiki);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+export const crewAgencyPage  = async(agency)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Agency:"
+    let small = document.createElement('small');
+    small.textContent = agency
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const crewStatusPage  = async(status)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Status:"
+    let small = document.createElement('small');
+    small.textContent = status
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
 
 

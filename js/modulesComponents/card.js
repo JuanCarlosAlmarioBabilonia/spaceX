@@ -11,7 +11,24 @@ export const imageRockets = async(flickr_images)=>{
         divs.push(div);
     });
     section__image.append(...divs)
-    // <div class="carousel__item">
-    //     <img src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg" referrerpolicy="no-referrer">
-    // </div>
 }
+
+export const imageCrew = async (crewData) => {
+    let section__image = document.querySelector("#section__image");
+    section__image.innerHTML = ""; 
+    crewData.forEach(member => {
+        let div = document.createElement("div");
+        div.classList.add("carousel__item");
+        
+        let img = document.createElement("img");
+        img.setAttribute("src", member.image);
+        img.setAttribute("alt", member.name); 
+        img.setAttribute("referrerpolicy", "no-referrer");
+
+
+        img.setAttribute("style", "width: 280px; height: 300px; margin-left: 75px; margin-top: -90px"); 
+
+        div.append(img);
+        section__image.append(div);
+    });
+};
