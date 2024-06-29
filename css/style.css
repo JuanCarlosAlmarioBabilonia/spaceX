@@ -125,7 +125,7 @@ body {
 .item__progress__bar {
     color: var(--color--five);
     display: flex;
-    margin-left: 4.5vw;
+    margin-left: vw;
     justify-content: center;
     text-align: center;
     align-items: center;

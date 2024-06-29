@@ -217,6 +217,47 @@ const getRocketsId = async(e)=>{
     await progressDiameterRocket(Rocket)
     await progressSecondStageDiameterRocket(Rocket)
     await progressSecondStageHeightRocket(Rocket)
+
+    let sectionImage = document.querySelector("#section__information__1");
+
+    let img3 = document.createElement("img");
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img3.classList.add("imagen-paginacion-roadster");
+    img3.style.position = "absolute";
+    img3.style.top = "270px"; 
+    img3.style.left = "690px"; 
+    img3.style.width = "300px"; 
+    img3.style.height = "150px";
+    img3.style.marginTop = "10px";
+    img3.style.marginLeft = "300px";
+    img3.style.borderRadius = "10%";
+    sectionImage.appendChild(img3);
+
+    let img4 = document.createElement("img");
+    img4.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img4.classList.add("imagen-paginacion-roadster");
+    img4.style.position = "absolute";
+    img4.style.top = "195px"; 
+    img4.style.left = "-210px"; 
+    img4.style.width = "300px"; 
+    img4.style.height = "150px";
+    img4.style.marginTop = "85px";
+    img4.style.marginLeft = "300px";
+    img4.style.borderRadius = "10%";
+    sectionImage.appendChild(img4);
+
+    let img5 = document.createElement("img");
+    img5.setAttribute("src", "storage/img/gif/co.webp");
+    img5.classList.add("imagen-paginacion-roadster");
+    img5.style.position = "absolute";
+    img5.style.top = "300px"; 
+    img5.style.left = "-235px"; 
+    img5.style.width = "300px"; 
+    img5.style.height = "200px";
+    img5.style.marginTop = "-200px";
+    img5.style.marginLeft = "757px";
+    img5.style.borderRadius = "10%";
+    sectionImage.appendChild(img5);
 }
 export const paginationRockets = async()=>{
     let rockets = await getAllRockets();
@@ -234,14 +275,6 @@ export const paginationRockets = async()=>{
     
     let [a1,a2,a3,a4] = div.children
     a3.click();
-    // <div class="buttom__paginacion">
-    //     <a href="#">&laquo;</a> 
-    //     <a href="#" class="activo">1</a>
-    //     <a href="#">2</a>
-    //     <a href="#">3</a>
-    //     <a href="#">4</a>
-    //     <a href="#">&raquo;</a>
-    // </div>
     
     return div;
 }
@@ -288,12 +321,12 @@ const getIdCap = async(e)=>{
     let sectionImage = document.querySelector("#section__information__1");
 
     let img2 = document.createElement("img");
-    img2.setAttribute("src", "storage/img/gif/co.webp"); // Cambia la ruta de la imagen
+    img2.setAttribute("src", "storage/img/gif/co.webp"); 
     img2.classList.add("imagen-paginacion-roadster");
     img2.style.position = "absolute";
-    img2.style.top = "220px"; // Ajusta la posición vertical de la segunda imagen
-    img2.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
-    img2.style.width = "445px"; // Ajusta el ancho de la segunda imagen
+    img2.style.top = "220px"; 
+    img2.style.left = "150px"; 
+    img2.style.width = "445px"; 
     img2.style.height = "350px";
     img2.style.marginTop = "10px";
     img2.style.marginLeft = "300px";
@@ -301,12 +334,12 @@ const getIdCap = async(e)=>{
     sectionImage.appendChild(img2);
 
     let img3 = document.createElement("img");
-    img3.setAttribute("src", "storage/img/gif/purple.webp"); // Cambia la ruta de la imagen
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); 
     img3.classList.add("imagen-paginacion-roadster");
     img3.style.position = "absolute";
-    img3.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
-    img3.style.left = "675px"; // Ajusta la posición horizontal de la segunda imagen
-    img3.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img3.style.top = "270px"; 
+    img3.style.left = "675px"; 
+    img3.style.width = "300px"; 
     img3.style.height = "150px";
     img3.style.marginTop = "10px";
     img3.style.marginLeft = "300px";
@@ -314,12 +347,12 @@ const getIdCap = async(e)=>{
     sectionImage.appendChild(img3);
 
     let img4 = document.createElement("img");
-    img4.setAttribute("src", "storage/img/gif/purple.webp"); // Cambia la ruta de la imagen
+    img4.setAttribute("src", "storage/img/gif/purple.webp"); 
     img4.classList.add("imagen-paginacion-roadster");
     img4.style.position = "absolute";
-    img4.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
-    img4.style.left = "-230px"; // Ajusta la posición horizontal de la segunda imagen
-    img4.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img4.style.top = "270px"; 
+    img4.style.left = "-230px"; 
+    img4.style.width = "300px"; 
     img4.style.height = "150px";
     img4.style.marginTop = "10px";
     img4.style.marginLeft = "300px";
@@ -418,14 +451,6 @@ export const paginationCapsules = async(page=1, limit=3)=>{
     console.log(div);
     let [back, a1,a2,a3,a4, next] = div.children
     a1.click();
-    // <div class="buttom__paginacion">
-    //     <a href="#">&laquo;</a> 
-    //     <a href="#" class="activo">1</a>
-    //     <a href="#">2</a>
-    //     <a href="#">3</a>
-    //     <a href="#">4</a>
-    //     <a href="#">&raquo;</a>
-    // </div>
     return div;
 }
 
@@ -477,12 +502,12 @@ const getAllIDCrew = async (e) => {
     let sectionImage = document.querySelector("#section__information__1");
 
     let img3 = document.createElement("img");
-    img3.setAttribute("src", "storage/img/gif/purple.webp"); // Cambia la ruta de la imagen
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); 
     img3.classList.add("imagen-paginacion-roadster");
     img3.style.position = "absolute";
-    img3.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
-    img3.style.left = "580px"; // Ajusta la posición horizontal de la segunda imagen
-    img3.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img3.style.top = "270px"; 
+    img3.style.left = "580px"; 
+    img3.style.width = "300px"; 
     img3.style.height = "150px";
     img3.style.marginTop = "85px";
     img3.style.marginLeft = "300px";
@@ -490,12 +515,12 @@ const getAllIDCrew = async (e) => {
     sectionImage.appendChild(img3);
 
     let img4 = document.createElement("img");
-    img4.setAttribute("src", "storage/img/gif/purple.webp"); // Cambia la ruta de la imagen
+    img4.setAttribute("src", "storage/img/gif/purple.webp");
     img4.classList.add("imagen-paginacion-roadster");
     img4.style.position = "absolute";
-    img4.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
-    img4.style.left = "-125px"; // Ajusta la posición horizontal de la segunda imagen
-    img4.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img4.style.top = "270px"; 
+    img4.style.left = "-125px"; 
+    img4.style.width = "300px"; 
     img4.style.height = "150px";
     img4.style.marginTop = "85px";
     img4.style.marginLeft = "300px";
@@ -503,12 +528,12 @@ const getAllIDCrew = async (e) => {
     sectionImage.appendChild(img4);
 
     let img5 = document.createElement("img");
-    img5.setAttribute("src", "storage/img/gif/co.webp"); // Cambia la ruta de la imagen
+    img5.setAttribute("src", "storage/img/gif/co.webp");
     img5.classList.add("imagen-paginacion-roadster");
     img5.style.position = "absolute";
-    img5.style.top = "270px"; // Ajusta la posición vertical de la segunda imagen
-    img5.style.left = "-230px"; // Ajusta la posición horizontal de la segunda imagen
-    img5.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img5.style.top = "270px"; 
+    img5.style.left = "-230px"; 
+    img5.style.width = "300px"; 
     img5.style.height = "150px";
     img5.style.marginTop = "-200px";
     img5.style.marginLeft = "757px";
