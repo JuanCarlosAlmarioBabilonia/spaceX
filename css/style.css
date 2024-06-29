@@ -61,6 +61,7 @@ body {
     /* background: blue; */
     overflow-y: auto;
     height: 75vh;
+    width:15vw
 }
 
 .description__buttom {
