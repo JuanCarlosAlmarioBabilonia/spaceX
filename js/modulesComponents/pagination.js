@@ -126,7 +126,8 @@ import {
 
 import { 
     imageRockets,
-    imageCrew
+    imageCrew,
+    imageLaunches
 } from "./card.js";
 
 import { 
@@ -606,8 +607,8 @@ const getIDLaunches = async (e) => {
 
     let launches = await getIdLaunches(e.target.id);
     console.log(launches);
-
     await nameLaunches(launches.name);
+    await imageLaunches([launches]);
 
     let description__item = document.querySelector("#description__item");
     description__item.innerHTML = "";
