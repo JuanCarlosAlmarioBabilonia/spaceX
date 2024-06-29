@@ -44,20 +44,6 @@ body {
     align-items: center;
     text-transform: uppercase;
 }
-.load{
-    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);
-    background-size: 200% 100%;
-    background-position: 100% 0;
-    animation: load 2s infinite;
-    width: 100%;
-    margin: 12px 0;
-    height: 100px;
-}
-@keyframes load{
-    100%{
-        background-position: -100% 0;
-    }
-}
 .main {
     /* background: orange; */
     height: 90vh;
@@ -322,7 +308,7 @@ body {
     display: flex; 
     justify-content: center;
     grid-template-areas: ". footer__menu .";
-    margin-left: -5vw;
+    margin-left: 1.5vw;
 }
 
 .footer ul {
@@ -332,7 +318,7 @@ body {
     display: flex;
     padding-left:3vw;
     padding-right:3vw;
-    gap:1.5vw;
+    gap:1vw;
     justify-content: space-between;
     align-items: center;
     border-radius: 5vw;
