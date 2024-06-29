@@ -821,6 +821,68 @@ const getIDCores = async (e) => {
     let coresStatusPageElement = await coresStatusPage(cores.status);
     information__2.append(coresStatusPageElement);
 
+    let information__table__1 = document.querySelector("#information__table__1");
+    information__table__1.innerHTML = "";
+    let h3 = document.createElement("h3");
+    h3.textContent = "Cores attemps and landings";
+    let hr = document.createElement("hr");
+    information__table__1.append(h3, hr);
+  
+    let divp = document.createElement("div");
+    divp.classList.add("table__container__1");
+  
+    let div1 = document.createElement("div");
+    let span1 = document.createElement("span");
+    span1.textContent = "Rtls attemps";
+    let strong1 = document.createElement("strong");
+    strong1.textContent = `${cores.rtls_attempts}`;
+    div1.append(span1, strong1);
+  
+    let div2 = document.createElement("div");
+    let span2 = document.createElement("span");
+    span2.textContent = "Rtls landings";
+    let strong2 = document.createElement("strong");
+    strong2.textContent = `${cores.rtls_landings}`;
+    div2.append(span2, strong2);
+
+    let div3 = document.createElement("div");
+    let span3 = document.createElement("span");
+    span3.textContent = "Asds attemps";
+    let strong3 = document.createElement("strong");
+    strong3.textContent = `${cores.asds_attempts}`;
+    div3.append(span3, strong3);
+
+    let div4 = document.createElement("div");
+    let span4 = document.createElement("span");
+    span4.textContent = "Asds landings";
+    let strong4 = document.createElement("strong");
+    strong4.textContent = `${cores.asds_landings}`;
+    div4.append(span4, strong4);
+  
+    divp.append(div1, div2, div3, div4);
+    information__table__1.append(divp);
+
+
+    let information__table__2 = document.querySelector("#information__table__2");
+    information__table__2.innerHTML = "";
+    let h4 = document.createElement("h3");
+    h4.textContent = "Cores details";
+    let hr1 = document.createElement("hr");
+    information__table__2.append(h4, hr1);
+  
+    let divs= document.createElement("div");
+    divs.classList.add("table__container__2");
+  
+    let div5 = document.createElement("div");
+    let span5 = document.createElement("span");
+    span5.textContent = "Last update: ";
+    let strong5= document.createElement("strong");
+    strong5.textContent = `${cores.last_update}`;
+    div5.append(span5, strong5);
+  
+    divs.append(div5);
+    information__table__2.append(divs)
+
 };
 
 export const paginationCores = async(page=1, limit=3)=>{  

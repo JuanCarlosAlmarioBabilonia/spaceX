@@ -655,4 +655,3 @@ export const coresStatusPage  = async(status)=>{
     return div; 
 }
 
-
