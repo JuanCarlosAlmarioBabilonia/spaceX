@@ -100,7 +100,14 @@ import {
     crewLaunchesPage,
     crewWikiPage,
     crewAgencyPage,
-    crewStatusPage
+    crewStatusPage,
+    launchesIdPage,
+    launchesRocketPage,
+    launchesPadPage,
+    launchesStaticPage,
+    launchesUtcPage,
+    launchesLocalPage,
+    launchesPrecisionPage
 } from "./information.js";
 
 
@@ -600,6 +607,30 @@ const getIDLaunches = async (e) => {
     console.log(launches);
 
     await nameLaunches(launches.name);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let launchesIdPageElement = await launchesIdPage(launches.id);
+    description__item.append(launchesIdPageElement);
+
+    let launchesRocketPageElement = await launchesRocketPage(launches.rocket);
+    description__item.append(launchesRocketPageElement);
+
+    let launchesPadPageElement = await launchesPadPage(launches.launchpad);
+    description__item.append(launchesPadPageElement);
+
+    let launchesStaticPageElement = await launchesStaticPage(launches.static_fire_date_utc);
+    description__item.append(launchesStaticPageElement);
+
+    let launchesUtcPageElement = await launchesUtcPage(launches.date_utc);
+    description__item.append(launchesUtcPageElement);
+
+    let launchesLocalPageElement = await launchesLocalPage(launches.date_local);
+    description__item.append(launchesLocalPageElement);
+
+    let launchesPrecisionPageElement = await launchesPrecisionPage(launches.date_precision);
+    description__item.append(launchesPrecisionPageElement);
 
 };
 
