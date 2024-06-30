@@ -189,7 +189,27 @@ import {
     payloadsEccentricityPage,
     payloadsPeriapsisKmPage,
     payloadsApoapsisKmPage,
-    payloadsInclinationDegPage
+    payloadsInclinationDegPage,
+    RoadsterIdPage,
+    RoadsterLaunchDUPage,
+    RoadsterLaunchMKGPage,
+    RoadsterLaunchMLBSPage,
+    RoadsterNoradIdPage,
+    RoadsterEpochJdPage,
+    RoadsterApoapsisAuPage,
+    RoadsterPeriapsisAuPage,
+    RoadsterSemiPage,
+    RoadsterEccentricityPage,
+    RoadsterInclinationPage,
+    RoadsterLongitudePage,
+    RoadsterPeriapsisArgPage,
+    RoadsterPeriodDaysPage,
+    RoadsterSpeedKphPage,
+    RoadsterSpeedMphPage,
+    RoadsterEarthDKMPage,
+    RoadsterEarthDMIPage,
+    RoadsterMarsDKMPage,
+    RoadsterMarsDMIPage
 } from "./information.js";
 
 
@@ -2409,6 +2429,70 @@ export const paginationRoadster = async() => {
     await clear()
 
     await nameRoadster(data.name);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let RoadsterIdPageElement = await RoadsterIdPage(data.id);
+    description__item.append(RoadsterIdPageElement)
+
+    let RoadsterLaunchDUPageElement = await RoadsterLaunchDUPage(data.launch_date_unix);
+    description__item.append(RoadsterLaunchDUPageElement)
+
+    let RoadsterLaunchMKGPageElement = await RoadsterLaunchMKGPage(data.launch_mass_kg);
+    description__item.append(RoadsterLaunchMKGPageElement)
+
+    let RoadsterLaunchMLBSPageElement = await RoadsterLaunchMLBSPage(data.launch_mass_lbs);
+    description__item.append(RoadsterLaunchMLBSPageElement)
+
+    let RoadsterNoradIdPageElement = await RoadsterNoradIdPage(data.norad_id);
+    description__item.append(RoadsterNoradIdPageElement)
+
+    let RoadsterEpochJdPageElement = await RoadsterEpochJdPage(data.epoch_jd);
+    description__item.append(RoadsterEpochJdPageElement)
+
+    let RoadsterApoapsisAuPageElement = await RoadsterApoapsisAuPage(data.apoapsis_au);
+    description__item.append(RoadsterApoapsisAuPageElement)
+
+    let RoadsterPeriapsisAuPageElement = await RoadsterPeriapsisAuPage(data.periapsis_au);
+    description__item.append(RoadsterPeriapsisAuPageElement)
+
+    let RoadsterSemiPageElement = await RoadsterSemiPage(data.semi_major_axis_au);
+    description__item.append(RoadsterSemiPageElement)
+
+    let RoadsterEccentricityPageElement = await RoadsterEccentricityPage(data.eccentricity);
+    description__item.append(RoadsterEccentricityPageElement)
+
+    let RoadsterInclinationPageElement = await RoadsterInclinationPage(data.inclination);
+    description__item.append(RoadsterInclinationPageElement)
+
+    let RoadsterLongitudePageElement = await RoadsterLongitudePage(data.longitude);
+    description__item.append(RoadsterLongitudePageElement)
+
+    let RoadsterPeriapsisArgPageElement = await RoadsterPeriapsisArgPage(data.periapsis_arg);
+    description__item.append(RoadsterPeriapsisArgPageElement)
+
+    let RoadsterPeriodDaysPageElement = await RoadsterPeriodDaysPage(data.period_days);
+    description__item.append(RoadsterPeriodDaysPageElement)
+
+    let RoadsterSpeedKphPageElement = await RoadsterSpeedKphPage(data.speed_kph);
+    description__item.append(RoadsterSpeedKphPageElement)
+
+    let RoadsterSpeedMphPageElement = await RoadsterSpeedMphPage(data.speed_mph);
+    description__item.append(RoadsterSpeedMphPageElement)
+
+    let RoadsterEarthDKMPageElement = await RoadsterEarthDKMPage(data.earth_distance_km);
+    description__item.append(RoadsterEarthDKMPageElement)
+
+    let RoadsterEarthDMIPageElement = await RoadsterEarthDMIPage(data.earth_distance_mi);
+    description__item.append(RoadsterEarthDMIPageElement)
+
+    let RoadsterMarsDKMPageElement = await RoadsterMarsDKMPage(data.mars_distance_km);
+    description__item.append(RoadsterMarsDKMPageElement)
+
+    let RoadsterMarsDMIPageElement = await RoadsterMarsDMIPage(data.mars_distance_mi);
+    description__item.append(RoadsterMarsDMIPageElement)
+
 }
 
 // Apartado payloads
