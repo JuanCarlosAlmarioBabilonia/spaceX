@@ -243,11 +243,11 @@ export const crewWikiPage  = async(wikipedia)=>{
     divLast.append(h3, small);
 
     let wiki = document.createElement('a');
-    wiki.textContent = wikipedia;
+    wiki.textContent = "Click aqui para ver el articulo de wikipedia";
     wiki.style.color = "white"; 
     wiki.style.textDecoration = "underline"; 
     wiki.href = wikipedia; 
-    wiki.style.fontSize = "8px";
+    wiki.style.fontSize = "14px";
     wiki.target = "_blank";
 
     divLast.appendChild(wiki);
