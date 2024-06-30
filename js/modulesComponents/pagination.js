@@ -1210,6 +1210,90 @@ const getIDShips = async (e) => {
     let ShipsLinkPageElement = await ShipsLinkPage(ship.link);
     information__2.append(ShipsLinkPageElement);
 
+
+    let information__table__1 = document.querySelector("#information__table__1");
+    information__table__1.innerHTML = "";
+    let h3 = document.createElement("h3");
+    h3.textContent = "Ships data";
+    let hr = document.createElement("hr");
+    information__table__1.append(h3, hr);
+  
+    let divp = document.createElement("div");
+    divp.classList.add("table__container__1");
+  
+    let div1 = document.createElement("div");
+    let span1 = document.createElement("span");
+    span1.textContent = "Imo";
+    let strong1 = document.createElement("strong");
+    strong1.textContent = `${ship.imo}`;
+    div1.append(span1, strong1);
+  
+    let div2 = document.createElement("div");
+    let span2 = document.createElement("span");
+    span2.textContent = "Mmsi";
+    let strong2 = document.createElement("strong");
+    strong2.textContent = `${ship.mmsi}`;
+    div2.append(span2, strong2);
+
+    let div3 = document.createElement("div");
+    let span3 = document.createElement("span");
+    span3.textContent = "Abs";
+    let strong3 = document.createElement("strong");
+    strong3.textContent = `${ship.abs}`;
+    div3.append(span3, strong3);
+
+    let div4 = document.createElement("div");
+    let span4 = document.createElement("span");
+    span4.textContent = "Class";
+    let strong4 = document.createElement("strong");
+    strong4.textContent = `${ship.class}`;
+    div4.append(span4, strong4);
+
+    let div5 = document.createElement("div");
+    let span5 = document.createElement("span");
+    span5.textContent = "Mass (kg)";
+    let strong5 = document.createElement("strong");
+    strong5.textContent = `${ship.mass_kg}`;
+    div5.append(span5, strong5)
+    
+    let div6 = document.createElement("div");
+    let span6 = document.createElement("span");
+    span6.textContent = "Mass (lbs)";
+    let strong6 = document.createElement("strong");
+    strong6.textContent = `${ship.mass_lbs}`;
+    div6.append(span6, strong6)
+
+    let div7 = document.createElement("div");
+    let span7 = document.createElement("span");
+    span7.textContent = "Year built";
+    let strong7 = document.createElement("strong");
+    strong7.textContent = `${ship.year_built}`;
+    div7.append(span7, strong7)
+  
+    divp.append(div1, div2, div3, div4, div5, div6, div7);
+    information__table__1.append(divp);
+
+
+    let information__table__2 = document.querySelector("#information__table__2");
+    information__table__2.innerHTML = "";
+    let h4 = document.createElement("h3");
+    h4.textContent = "Ships legacy id";
+    let hr1 = document.createElement("hr");
+    information__table__2.append(h4, hr1);
+  
+    let divs= document.createElement("div");
+    divs.classList.add("table__container__2");
+  
+    let div8 = document.createElement("div");
+    let span8 = document.createElement("span");
+    span8.textContent = "Legacy id:";
+    let strong8= document.createElement("strong");
+    strong8.textContent = `${ship.legacy_id}`;
+    div8.append(span8, strong8);
+  
+    divs.append(div8);
+    information__table__2.append(divs)
+
 };
 
 export const paginationShips = async(page=1, limit=3)=>{  
