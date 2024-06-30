@@ -182,7 +182,14 @@ import {
     payloadsReferenceSystemPage,
     payloadsRegimePage,
     payloadsMassKgPage,
-    payloadsMassLbsPage
+    payloadsMassLbsPage,
+    payloadsCustomersPage,
+    payloadsNationalitiesPage,
+    payloadsManufacturersPage,
+    payloadsEccentricityPage,
+    payloadsPeriapsisKmPage,
+    payloadsApoapsisKmPage,
+    payloadsInclinationDegPage
 } from "./information.js";
 
 
@@ -2277,6 +2284,31 @@ const getIDPayloads = async (e) => {
 
     let payloadsMassLbsPageElement = await payloadsMassLbsPage(payloads.mass_lbs);
     description__item.append(payloadsMassLbsPageElement)
+
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let payloadsCustomersPageElement = await payloadsCustomersPage(payloads.customers);
+    information__2.append(payloadsCustomersPageElement)
+
+    let payloadsNationalitiesPageElement = await payloadsNationalitiesPage(payloads.nationalities);
+    information__2.append(payloadsNationalitiesPageElement)
+
+    let payloadsManufacturersPageElement = await payloadsManufacturersPage(payloads.manufacturers);
+    information__2.append(payloadsManufacturersPageElement)
+
+    let payloadsEccentricityPageElement = await payloadsEccentricityPage(payloads.manufacturers);
+    information__2.append(payloadsEccentricityPageElement)
+
+    let payloadsPeriapsisKmPageElement = await payloadsPeriapsisKmPage(payloads.periapsis_km);
+    information__2.append(payloadsPeriapsisKmPageElement)
+
+    let payloadsApoapsisKmPageElement = await payloadsApoapsisKmPage(payloads.apoapsis_km);
+    information__2.append(payloadsApoapsisKmPageElement)
+
+    let payloadsInclinationDegPageElement = await payloadsInclinationDegPage(payloads.inclination_deg);
+    information__2.append(payloadsInclinationDegPageElement)
 
 };
 
