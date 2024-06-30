@@ -921,3 +921,34 @@ export const ShipsActivePage  = async(active)=>{
     return div; 
 }
 
+export const ShipsLinkPage  = async(link)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Link:"
+    let small = document.createElement('small');
+    divLast.append(h3, small);
+
+    let linki = document.createElement('a');
+    linki.textContent = "Click aqui para ver el articulo";
+    linki.style.color = "white"; 
+    linki.style.textDecoration = "underline"; 
+    linki.href = link; 
+    linki.style.fontSize = "14px";
+    linki.target = "_blank";
+
+    divLast.appendChild(linki);
+    div.append(divFirst, divLast);
+
+    return div; 
+}

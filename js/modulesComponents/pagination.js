@@ -125,7 +125,8 @@ import {
     ShipsIdPage,
     ShipsTypePage,
     ShipsHomePortPage,
-    ShipsActivePage
+    ShipsActivePage,
+    ShipsLinkPage
 } from "./information.js";
 
 
@@ -1202,7 +1203,12 @@ const getIDShips = async (e) => {
     let ShipsActivePageElement = await ShipsActivePage(ship.active);
     description__item.append(ShipsActivePageElement);
 
-    
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let ShipsLinkPageElement = await ShipsLinkPage(ship.link);
+    information__2.append(ShipsLinkPageElement);
 
 };
 
