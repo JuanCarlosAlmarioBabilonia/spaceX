@@ -2332,7 +2332,7 @@ const getIDPayloads = async (e) => {
 
     let payloadsInclinationDegPageElement = await payloadsInclinationDegPage(payloads.inclination_deg);
     information__2.append(payloadsInclinationDegPageElement)
-    
+
 
     let sectionImage = document.querySelector("#section__information__1");
 
@@ -2387,6 +2387,7 @@ const getIDPayloads = async (e) => {
     img6.style.marginLeft = "757px";
     img6.style.borderRadius = "10%";
     sectionImage.appendChild(img6);
+
 
 };
 
@@ -2507,6 +2508,54 @@ export const paginationRoadster = async() => {
     let RoadsterYoutubePageElement = await RoadsterYoutubePage(data.video);
     information__2.append(RoadsterYoutubePageElement)
 
+
+    let information__table__1 = document.querySelector("#information__table__1");
+    information__table__1.innerHTML = "";
+    let h3 = document.createElement("h3");
+    h3.textContent = "Roadster data";
+    let hr = document.createElement("hr");
+    information__table__1.append(h3, hr);
+  
+    let divp = document.createElement("div");
+    divp.classList.add("table__container__1");
+  
+    let div1 = document.createElement("div");
+    let span1 = document.createElement("span");
+    span1.textContent = "Launch date utc";
+    let strong1 = document.createElement("strong");
+    strong1.textContent = `${data.launch_date_utc}`;
+    div1.append(span1, strong1);
+  
+    let div2 = document.createElement("div");
+    let span2 = document.createElement("span");
+    span2.textContent = "Orbit type";
+    let strong2 = document.createElement("strong");
+    strong2.textContent = `${data.orbit_type}`;
+    div2.append(span2, strong2);
+  
+    divp.append(div1, div2);
+    information__table__1.append(divp);
+
+    let information__table__2 = document.querySelector("#information__table__2");
+    information__table__2.innerHTML = "";
+    let h4 = document.createElement("h3");
+    h4.textContent = "Roadster details";
+    let hr1 = document.createElement("hr");
+    information__table__2.append(h4, hr1);
+  
+    let divs= document.createElement("div");
+    divs.classList.add("table__container__2");
+  
+    let div8 = document.createElement("div");
+    let span8 = document.createElement("span");
+    span8.textContent = "Details:";
+    let strong8= document.createElement("strong");
+    strong8.textContent = `${data.details}`;
+    div8.append(span8, strong8);
+  
+    divs.append(div8);
+    information__table__2.append(divs)
+    
 
     let sectionImage = document.querySelector("#section__information__1");
 
