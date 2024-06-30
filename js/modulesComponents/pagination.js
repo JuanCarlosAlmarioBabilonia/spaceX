@@ -824,7 +824,7 @@ const getIDCores = async (e) => {
     let information__table__1 = document.querySelector("#information__table__1");
     information__table__1.innerHTML = "";
     let h3 = document.createElement("h3");
-    h3.textContent = "Cores attemps and landings";
+    h3.textContent = "Cores attempts and landings";
     let hr = document.createElement("hr");
     information__table__1.append(h3, hr);
   
@@ -833,7 +833,7 @@ const getIDCores = async (e) => {
   
     let div1 = document.createElement("div");
     let span1 = document.createElement("span");
-    span1.textContent = "Rtls attemps";
+    span1.textContent = "Rtls attempts";
     let strong1 = document.createElement("strong");
     strong1.textContent = `${cores.rtls_attempts}`;
     div1.append(span1, strong1);
@@ -847,7 +847,7 @@ const getIDCores = async (e) => {
 
     let div3 = document.createElement("div");
     let span3 = document.createElement("span");
-    span3.textContent = "Asds attemps";
+    span3.textContent = "Asds attempts";
     let strong3 = document.createElement("strong");
     strong3.textContent = `${cores.asds_attempts}`;
     div3.append(span3, strong3);
