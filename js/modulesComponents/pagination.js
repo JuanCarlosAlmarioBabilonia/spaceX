@@ -2831,6 +2831,48 @@ const getIDStarlink = async (e) => {
     information__table__2.append(divs)
 
 
+    let sectionImage = document.querySelector("#section__information__1");
+
+    let img2 = document.createElement("img");
+    img2.setAttribute("src", "storage/img/gif/co.webp"); 
+    img2.classList.add("imagen-paginacion-roadster");
+    img2.style.position = "absolute";
+    img2.style.top = "220px"; 
+    img2.style.left = "150px"; 
+    img2.style.width = "445px"; 
+    img2.style.height = "350px";
+    img2.style.marginTop = "10px";
+    img2.style.marginLeft = "300px";
+    img2.style.borderRadius = "10%";
+    sectionImage.appendChild(img2);
+
+    let img3 = document.createElement("img");
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img3.classList.add("imagen-paginacion-roadster");
+    img3.style.position = "absolute";
+    img3.style.top = "270px"; 
+    img3.style.left = "675px"; 
+    img3.style.width = "300px"; 
+    img3.style.height = "150px";
+    img3.style.marginTop = "10px";
+    img3.style.marginLeft = "300px";
+    img3.style.borderRadius = "10%";
+    sectionImage.appendChild(img3);
+
+    let img4 = document.createElement("img");
+    img4.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img4.classList.add("imagen-paginacion-roadster");
+    img4.style.position = "absolute";
+    img4.style.top = "270px"; 
+    img4.style.left = "-230px"; 
+    img4.style.width = "300px"; 
+    img4.style.height = "150px";
+    img4.style.marginTop = "10px";
+    img4.style.marginLeft = "300px";
+    img4.style.borderRadius = "10%";
+    sectionImage.appendChild(img4);
+
+
 };
 
 export const paginationStarlink = async(page=1, limit=3)=>{  
