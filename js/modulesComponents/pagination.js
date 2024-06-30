@@ -173,7 +173,9 @@ import {
     launchpadsRocketsPage,
     launchpadsFullNamePage,
     launchpadsLocalityPage,
-    launchpadsRegionPage
+    launchpadsRegionPage,
+    launchpadsTimezonePage,
+    launchpadsStatusPage
 } from "./information.js";
 
 
@@ -2068,6 +2070,16 @@ const getIDLaunchpads = async (e) => {
 
     let launchapdsRegionPageElement = await launchpadsRegionPage(launchpads.region);
     description__item.append(launchapdsRegionPageElement)
+
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let launchapdsTimezonePageElement = await launchpadsTimezonePage(launchpads.timezone);
+    information__2.append(launchapdsTimezonePageElement);
+
+    let launchapdsStatusPageElement = await launchpadsStatusPage(launchpads.status);
+    information__2.append(launchapdsStatusPageElement);
 
 
 };
