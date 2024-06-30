@@ -74,3 +74,24 @@ export const ImageLandpads = async (landpadsData) => {
         section__image.append(div);
     });
 };
+
+export const imageShips = async (ship) => {
+    console.log(ship);
+    let section__image = document.querySelector("#section__image");
+    section__image.innerHTML = "";
+
+    let div = document.createElement("div");
+    div.classList.add("carousel__item");
+
+    let imageUrl = ship.image || "storage/img/icons/ships.gif"; 
+
+    let img = document.createElement("img");
+    img.setAttribute("src", imageUrl);
+    img.setAttribute("alt", ship.name); 
+    img.setAttribute("referrerpolicy", "no-referrer");
+
+    img.setAttribute("style", "width: 280px; height: 300px; margin-left: 75px; margin-top: -90px");
+
+    div.append(img);
+    section__image.append(div);
+};
