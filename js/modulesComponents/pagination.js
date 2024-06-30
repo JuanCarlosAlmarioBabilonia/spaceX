@@ -150,6 +150,23 @@ import {
     dragonsDryKgPage,
     dragonsDryLbPage,
     dragonsFirstFlightPage,
+    dragonsWikiPage,
+    dragonsHeatShieldPage,
+    dragonsSizeMetersPage,
+    dragonsTempDegreesPage,
+    dragonsDevPartnerPage,
+    dragonsLaunchPMKPage,
+    dragonsLaunchPMLPage,
+    dragonsLaunchPBCMPage,
+    dragonsLaunchPBCFPage,
+    dragonsReturnPMKGPage,
+    dragonsReturnPMLBPage,
+    dragonsReturnPVCMPage,
+    dragonsReturnPVCFPage,
+    dragonsHeightMetersPage,
+    dragonsHeightFeetPage,
+    dragonsDiameterMPage,
+    dragonsDiameterFPage
 } from "./information.js";
 
 
@@ -1630,6 +1647,61 @@ const getIDDragons = async (e) => {
 
     let dragonsFirstFlightPageElement = await dragonsFirstFlightPage(dragons.first_flight);
     description__item.append(dragonsFirstFlightPageElement);
+
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let dragonsWikiPageElement = await dragonsWikiPage(dragons.wikipedia);
+    information__2.append(dragonsWikiPageElement);
+
+    let dragonsHeatShieldPageElement = await dragonsHeatShieldPage(dragons.heat_shield.material);
+    information__2.append(dragonsHeatShieldPageElement);
+
+    let dragonsSizeMeterPageElement = await dragonsSizeMetersPage(dragons.heat_shield.size_meters);
+    information__2.append(dragonsSizeMeterPageElement);
+
+    let dragonsTempDegreesPageElement = await dragonsTempDegreesPage(dragons.heat_shield.temp_degrees);
+    information__2.append(dragonsTempDegreesPageElement);
+
+    let dragonsDevPartnerPageElement = await dragonsDevPartnerPage(dragons.heat_shield.dev_partner);
+    information__2.append(dragonsDevPartnerPageElement);
+
+    let dragonsLaunchPMPageElement = await dragonsLaunchPMKPage(dragons.launch_payload_mass.kg);
+    information__2.append(dragonsLaunchPMPageElement);
+
+    let dragonsLaunchPM2PageElement = await dragonsLaunchPMLPage(dragons.launch_payload_mass.lb);
+    information__2.append(dragonsLaunchPM2PageElement);
+
+    let dragonsLaunchPBCMPageElement = await dragonsLaunchPBCMPage(dragons.launch_payload_vol.cubic_meters);
+    information__2.append(dragonsLaunchPBCMPageElement);
+
+    let dragonsLaunchPBCFPageElement = await dragonsLaunchPBCFPage(dragons.launch_payload_vol.cubic_feet);
+    information__2.append(dragonsLaunchPBCFPageElement);
+
+    let dragonsReturnPMKGPageElement = await dragonsReturnPMKGPage(dragons.return_payload_mass.kg);
+    information__2.append(dragonsReturnPMKGPageElement);
+
+    let dragonsReturnPMLBPageElement = await dragonsReturnPMLBPage(dragons.return_payload_mass.lb);
+    information__2.append(dragonsReturnPMLBPageElement);
+
+    let dragonsReturnPVCMPageElement = await dragonsReturnPVCMPage(dragons.return_payload_vol.cubic_meters);
+    information__2.append(dragonsReturnPVCMPageElement);
+
+    let dragonsReturnPVCFPageElement = await dragonsReturnPVCFPage(dragons.return_payload_vol.cubic_feet);
+    information__2.append(dragonsReturnPVCFPageElement);
+
+    let dragonsHeightMetersPageElement = await dragonsHeightMetersPage(dragons.height_w_trunk.meters);
+    information__2.append(dragonsHeightMetersPageElement);
+
+    let dragonsHeightFeetPageElement = await dragonsHeightFeetPage(dragons.height_w_trunk.feet);
+    information__2.append(dragonsHeightFeetPageElement);
+
+    let dragonsDiameterMPageElement = await dragonsDiameterMPage(dragons.diameter.meters);
+    information__2.append(dragonsDiameterMPageElement);
+
+    let dragonsDiameterFPageElement = await dragonsDiameterFPage(dragons.diameter.feet);
+    information__2.append(dragonsDiameterFPageElement);
 
 };
 

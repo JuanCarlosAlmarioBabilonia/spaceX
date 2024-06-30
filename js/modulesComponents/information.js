@@ -1523,5 +1523,387 @@ export const dragonsFirstFlightPage  = async(first_flight)=>{
     return div; 
 }
 
+export const dragonsWikiPage  = async(wikipedia)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Wikipedia:"
+    let small = document.createElement('small');
+    divLast.append(h3, small);
+
+    let wiki = document.createElement('a');
+    wiki.textContent = "Click aqui para ver el articulo de wikipedia";
+    wiki.style.color = "white"; 
+    wiki.style.textDecoration = "underline"; 
+    wiki.href = wikipedia; 
+    wiki.style.fontSize = "14px";
+    wiki.target = "_blank";
+
+    divLast.appendChild(wiki);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsHeatShieldPage  = async(heat_shield)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h2 = document.createElement('h2');
+    h2.textContent = "Heat Shield"
+    h2.style.color= "white";
+    let h3 = document.createElement('h3');
+    h3.textContent = "material:"
+    h3.style.marginTop="15px"
+    let small = document.createElement('small');
+    small.textContent = heat_shield
+    divLast.append(h2, h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsSizeMetersPage  = async(heat_shield)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Size meter:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = heat_shield
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsTempDegreesPage  = async(heat_shield)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Temp degrees:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = heat_shield
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsDevPartnerPage  = async(heat_shield)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Dev partner:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = heat_shield
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsLaunchPMKPage  = async(launch_payload_mass)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h2 = document.createElement('h2');
+    h2.textContent = "Launch payload mass"
+    h2.style.color= "white";
+    let h3 = document.createElement('h3');
+    h3.textContent = "Kg:"
+    h3.style.marginTop="15px"
+    let small = document.createElement('small');
+    small.textContent = launch_payload_mass
+    divLast.append(h2, h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsLaunchPMLPage  = async(launch_payload_mass)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Lb:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = launch_payload_mass
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsLaunchPBCMPage  = async(launch_payload_vol)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h2 = document.createElement('h2');
+    h2.textContent = "Launch payload vol"
+    h2.style.color= "white";
+    let h3 = document.createElement('h3');
+    h3.textContent = "Cubic meters:"
+    h3.style.marginTop="15px"
+    let small = document.createElement('small');
+    small.textContent = launch_payload_vol
+    divLast.append(h2, h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsLaunchPBCFPage  = async(launch_payload_vol)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Cubic feet:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = launch_payload_vol
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsReturnPMKGPage  = async(return_payload_mass)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h2 = document.createElement('h2');
+    h2.textContent = "Return payload mass"
+    h2.style.color= "white";
+    let h3 = document.createElement('h3');
+    h3.textContent = "Kg:"
+    h3.style.marginTop="15px"
+    let small = document.createElement('small');
+    small.textContent = return_payload_mass
+    divLast.append(h2, h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsReturnPMLBPage  = async(return_payload_mass)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Lb:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = return_payload_mass
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsReturnPVCMPage  = async(return_payload_vol)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h2 = document.createElement('h2');
+    h2.textContent = "Return payload vol"
+    h2.style.color= "white";
+    let h3 = document.createElement('h3');
+    h3.textContent = "Cubic meters:"
+    h3.style.marginTop="15px"
+    let small = document.createElement('small');
+    small.textContent = return_payload_vol
+    divLast.append(h2, h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsReturnPVCFPage  = async(return_payload_vol)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Cubic feet:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = return_payload_vol
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsHeightMetersPage  = async(height_w_trunk)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h2 = document.createElement('h2');
+    h2.textContent = "Height W Trunk"
+    h2.style.color= "white";
+    let h3 = document.createElement('h3');
+    h3.textContent = "Meters:"
+    h3.style.marginTop="15px"
+    let small = document.createElement('small');
+    small.textContent = height_w_trunk
+    divLast.append(h2, h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsHeightFeetPage  = async(height_w_trunk)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Feet:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = height_w_trunk
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsDiameterMPage  = async(diameter)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h2 = document.createElement('h2');
+    h2.textContent = "Diameter"
+    h2.style.color= "white";
+    let h3 = document.createElement('h3');
+    h3.textContent = "Meters:"
+    h3.style.marginTop="15px"
+    let small = document.createElement('small');
+    small.textContent = diameter
+    divLast.append(h2, h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const dragonsDiameterFPage  = async(diameter)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');  
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Feet:"
+    h3.style.marginLeft="50px";
+    h3.style.marginTop="-15px"
+    let small = document.createElement('small');
+    small.textContent = diameter
+    small.style.marginLeft="50px";
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
 
 
