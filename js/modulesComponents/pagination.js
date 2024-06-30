@@ -404,6 +404,19 @@ const getRocketsId = async(e)=>{
     img5.style.marginLeft = "757px";
     img5.style.borderRadius = "10%";
     sectionImage.appendChild(img5);
+
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
 }
 export const paginationRockets = async()=>{
     let rockets = await getAllRockets();
@@ -502,6 +515,19 @@ const getIdCap = async(e)=>{
     img4.style.marginLeft = "300px";
     img4.style.borderRadius = "10%";
     sectionImage.appendChild(img4);
+
+    let img5 = document.createElement("img");
+    img5.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img5.classList.add("imagen-paginacion-roadster");
+    img5.style.position = "absolute";
+    img5.style.top = "705px"; 
+    img5.style.left = "-557px"; 
+    img5.style.width = "250px"; 
+    img5.style.height = "100px";
+    img5.style.marginTop = "10px";
+    img5.style.marginLeft = "300px";
+    img5.style.borderRadius = "10%";
+    sectionImage.appendChild(img5);
 
 
     let information__table__1 = document.querySelector("#information__table__1");
@@ -683,6 +709,19 @@ const getAllIDCrew = async (e) => {
     img5.style.marginLeft = "757px";
     img5.style.borderRadius = "10%";
     sectionImage.appendChild(img5);
+
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
     
 };
 
@@ -871,6 +910,19 @@ const getIDLaunches = async (e) => {
     img5.style.marginLeft = "757px";
     img5.style.borderRadius = "10%";
     sectionImage.appendChild(img5);
+
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
     
 
 };
@@ -1054,6 +1106,19 @@ const getIDCores = async (e) => {
     img4.style.marginLeft = "300px";
     img4.style.borderRadius = "10%";
     sectionImage.appendChild(img4);
+
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
 
 };
 
@@ -1245,6 +1310,19 @@ const getIDLandpads = async (e) => {
     img5.style.marginLeft = "757px";
     img5.style.borderRadius = "10%";
     sectionImage.appendChild(img5);
+
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
 
 
 };
@@ -1453,6 +1531,19 @@ const getIDShips = async (e) => {
     img5.style.marginLeft = "757px";
     img5.style.borderRadius = "10%";
     sectionImage.appendChild(img5);
+
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
 
 };
 
@@ -1670,6 +1761,19 @@ export const paginationCompany = async() => {
     img6.style.marginLeft = "757px";
     img6.style.borderRadius = "10%";
     sectionImage.appendChild(img6);
+
+    let img7 = document.createElement("img");
+    img7.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img7.classList.add("imagen-paginacion-roadster");
+    img7.style.position = "absolute";
+    img7.style.top = "705px"; 
+    img7.style.left = "-557px"; 
+    img7.style.width = "250px"; 
+    img7.style.height = "100px";
+    img7.style.marginTop = "10px";
+    img7.style.marginLeft = "300px";
+    img7.style.borderRadius = "10%";
+    sectionImage.appendChild(img7);
 
 }
 
@@ -1900,6 +2004,19 @@ const getIDDragons = async (e) => {
     img5.style.borderRadius = "10%";
     sectionImage.appendChild(img5);
 
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
+
 };
 
 export const paginationDragons = async(page=1, limit=3)=>{  
@@ -2061,6 +2178,19 @@ const getIDHistory = async (e) => {
     img4.style.marginLeft = "300px";
     img4.style.borderRadius = "10%";
     sectionImage.appendChild(img4);
+
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
 };
 
 export const paginationHistory = async(page=1, limit=3)=>{  
@@ -2250,6 +2380,19 @@ const getIDLaunchpads = async (e) => {
     img5.style.borderRadius = "10%";
     sectionImage.appendChild(img5);
 
+    let img6 = document.createElement("img");
+    img6.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img6.classList.add("imagen-paginacion-roadster");
+    img6.style.position = "absolute";
+    img6.style.top = "705px"; 
+    img6.style.left = "-557px"; 
+    img6.style.width = "250px"; 
+    img6.style.height = "100px";
+    img6.style.marginTop = "10px";
+    img6.style.marginLeft = "300px";
+    img6.style.borderRadius = "10%";
+    sectionImage.appendChild(img6);
+
 
 };
 
@@ -2416,6 +2559,19 @@ const getIDPayloads = async (e) => {
     img6.style.marginLeft = "757px";
     img6.style.borderRadius = "10%";
     sectionImage.appendChild(img6);
+
+    let img7 = document.createElement("img");
+    img7.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img7.classList.add("imagen-paginacion-roadster");
+    img7.style.position = "absolute";
+    img7.style.top = "705px"; 
+    img7.style.left = "-557px"; 
+    img7.style.width = "250px"; 
+    img7.style.height = "100px";
+    img7.style.marginTop = "10px";
+    img7.style.marginLeft = "300px";
+    img7.style.borderRadius = "10%";
+    sectionImage.appendChild(img7);
 
 
 };
@@ -2626,6 +2782,19 @@ export const paginationRoadster = async() => {
     img5.style.marginLeft = "757px";
     img5.style.borderRadius = "10%";
     sectionImage.appendChild(img5);
+
+    let img7 = document.createElement("img");
+    img7.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img7.classList.add("imagen-paginacion-roadster");
+    img7.style.position = "absolute";
+    img7.style.top = "705px"; 
+    img7.style.left = "-557px"; 
+    img7.style.width = "250px"; 
+    img7.style.height = "100px";
+    img7.style.marginTop = "10px";
+    img7.style.marginLeft = "300px";
+    img7.style.borderRadius = "10%";
+    sectionImage.appendChild(img7);
 
 
 }
@@ -2872,6 +3041,31 @@ const getIDStarlink = async (e) => {
     img4.style.borderRadius = "10%";
     sectionImage.appendChild(img4);
 
+    let img5 = document.createElement("img");
+    img5.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img5.classList.add("imagen-paginacion-roadster");
+    img5.style.position = "absolute";
+    img5.style.top = "705px"; 
+    img5.style.left = "-557px"; 
+    img5.style.width = "250px"; 
+    img5.style.height = "100px";
+    img5.style.marginTop = "10px";
+    img5.style.marginLeft = "300px";
+    img5.style.borderRadius = "10%";
+    sectionImage.appendChild(img5);
+
+    let img7 = document.createElement("img");
+    img7.setAttribute("src", "storage/img/gif/spacex.jpg"); 
+    img7.classList.add("imagen-paginacion-roadster");
+    img7.style.position = "absolute";
+    img7.style.top = "705px"; 
+    img7.style.left = "-557px"; 
+    img7.style.width = "250px"; 
+    img7.style.height = "100px";
+    img7.style.marginTop = "10px";
+    img7.style.marginLeft = "300px";
+    img7.style.borderRadius = "10%";
+    sectionImage.appendChild(img7);
 
 };
 
