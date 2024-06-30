@@ -140,7 +140,16 @@ import {
     companyLinkPage,
     companyFlickrPage,
     companyTwitterPage,
-    companyElonTwitterPage
+    companyElonTwitterPage,
+    dragonsIdPage,
+    dragonsTypePage,
+    dragonsActivePage,
+    dragonsCrewCapacityPage,
+    dragonsSidewallPage,
+    dragonsOrbitPage,
+    dragonsDryKgPage,
+    dragonsDryLbPage,
+    dragonsFirstFlightPage,
 } from "./information.js";
 
 
@@ -1591,6 +1600,36 @@ const getIDDragons = async (e) => {
     console.log(dragons);
 
     await nameDragons(dragons.name);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let dragonsIdPageElement = await dragonsIdPage(dragons.id);
+    description__item.append(dragonsIdPageElement);
+
+    let dragonsTypePageElement = await dragonsTypePage(dragons.type);
+    description__item.append(dragonsTypePageElement);
+
+    let dragonsActivePageElement = await dragonsActivePage(dragons.active);
+    description__item.append(dragonsActivePageElement);
+
+    let dragonsCrewCapacityPageElement = await dragonsCrewCapacityPage(dragons.crew_capacity);
+    description__item.append(dragonsCrewCapacityPageElement);
+
+    let dragonsSidewallPageElement = await dragonsSidewallPage(dragons.sidewall_angle_deg);
+    description__item.append(dragonsSidewallPageElement);
+
+    let dragonsOrbitPageElement = await dragonsOrbitPage(dragons.orbit_duration_yr);
+    description__item.append(dragonsOrbitPageElement);
+
+    let dragonsDryKgPageElement = await dragonsDryKgPage(dragons.dry_mass_kg);
+    description__item.append(dragonsDryKgPageElement);
+
+    let dragonsDryLbPageElement = await dragonsDryLbPage(dragons.dry_mass_lb);
+    description__item.append(dragonsDryLbPageElement);
+
+    let dragonsFirstFlightPageElement = await dragonsFirstFlightPage(dragons.first_flight);
+    description__item.append(dragonsFirstFlightPageElement);
 
 };
 
