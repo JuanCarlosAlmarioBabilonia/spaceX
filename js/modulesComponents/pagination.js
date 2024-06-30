@@ -2747,6 +2747,90 @@ const getIDStarlink = async (e) => {
     information__2.append(StarlinkPERIAPSISPageElement)
 
 
+    let information__table__1 = document.querySelector("#information__table__1");
+    information__table__1.innerHTML = "";
+    let h3 = document.createElement("h3");
+    h3.textContent = "Starlink TLE-LINE";
+    let hr = document.createElement("hr");
+    information__table__1.append(h3, hr);
+  
+    let divp = document.createElement("div");
+    divp.classList.add("table__container__1");
+  
+    let div1 = document.createElement("div");
+    let span1 = document.createElement("span");
+    span1.textContent = "TLE-LINE 0";
+    let strong1 = document.createElement("strong");
+    strong1.textContent = `${starlink.spaceTrack.TLE_LINE0}`;
+    div1.append(span1, strong1);
+
+    let div2 = document.createElement("div");
+    let span2 = document.createElement("span");
+    span2.textContent = "TLE-LINE 1";
+    let strong2 = document.createElement("strong");
+    strong2.textContent = `${starlink.spaceTrack.TLE_LINE1}`;
+    div2.append(span2, strong2);
+
+    let div3 = document.createElement("div");
+    let span3 = document.createElement("span");
+    span3.textContent = "TLE-LINE 2";
+    let strong3 = document.createElement("strong");
+    strong3.textContent = `${starlink.spaceTrack.TLE_LINE2}`;
+    div3.append(span3, strong3);
+
+  
+    divp.append(div1, div2, div3);
+    information__table__1.append(divp);
+
+    let information__table__2 = document.querySelector("#information__table__2");
+    information__table__2.innerHTML = "";
+    let h4 = document.createElement("h3");
+    h4.textContent = "Starlink dates";
+    let hr1 = document.createElement("hr");
+    information__table__2.append(h4, hr1);
+  
+    let divs= document.createElement("div");
+    divs.classList.add("table__container__2");
+  
+    let div8 = document.createElement("div");
+    let span8 = document.createElement("span");
+    span8.textContent = "Creation date:";
+    let strong8= document.createElement("strong");
+    strong8.textContent = `${starlink.spaceTrack.CREATION_DATE}`;
+    div8.append(span8, strong8);
+
+    let div9 = document.createElement("div");
+    let span9 = document.createElement("span");
+    span9.textContent = "Epoch:";
+    let strong9= document.createElement("strong");
+    strong9.textContent = `${starlink.spaceTrack.EPOCH}`;
+    div9.append(span9, strong9);
+
+    let div10 = document.createElement("div");
+    let span10 = document.createElement("span");
+    span10.textContent = "Launch date:";
+    let strong10= document.createElement("strong");
+    strong10.textContent = `${starlink.spaceTrack.LAUNCH_DATE}`;
+    div10.append(span10, strong10);
+
+    let div11 = document.createElement("div");
+    let span11 = document.createElement("span");
+    span11.textContent = "Decay date:";
+    let strong11= document.createElement("strong");
+    strong11.textContent = `${starlink.spaceTrack.DECAY_DATE}`;
+    div11.append(span11, strong11);
+
+    let div12 = document.createElement("div");
+    let span12 = document.createElement("span");
+    span12.textContent = "Decayed:";
+    let strong12= document.createElement("strong");
+    strong12.textContent = `${starlink.spaceTrack.DECAYED}`;
+    div12.append(span12, strong12);
+  
+    divs.append(div8, div9, div10, div11, div12);
+    information__table__2.append(divs)
+
+
 };
 
 export const paginationStarlink = async(page=1, limit=3)=>{  
