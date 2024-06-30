@@ -114,7 +114,13 @@ import {
     coresIdPage,
     coresLaunchesPage,
     coresSerialPage,
-    coresStatusPage
+    coresStatusPage,
+    landpadsIdPage,
+    landpadsFullNamePage,
+    landpadsStatusPage,
+    landpadsTypePage,
+    landpadsLocalityPage,
+    landpadsRegionPage,
 } from "./information.js";
 
 
@@ -983,6 +989,25 @@ const getIDLandpads = async (e) => {
     console.log(landpads);
 
     await nameLandpads(landpads.name);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let LandpadsFullNamePageElement = await landpadsFullNamePage(landpads.full_name);
+    description__item.append(LandpadsFullNamePageElement);
+
+    let LandpadsStatusPageElement = await landpadsStatusPage(landpads.status);
+    description__item.append(LandpadsStatusPageElement);
+
+    let LandpadsTypePageElement = await landpadsTypePage(landpads.type);
+    description__item.append(LandpadsTypePageElement);
+
+    let LandpadsLocalityPageElement = await landpadsLocalityPage(landpads.locality);
+    description__item.append(LandpadsLocalityPageElement);
+
+    let LandpadsRegionPageElement = await landpadsRegionPage(landpads.region);
+    description__item.append(LandpadsRegionPageElement);
+
 
 };
 
