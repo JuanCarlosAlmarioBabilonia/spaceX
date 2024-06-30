@@ -1897,6 +1897,54 @@ const getIDHistory = async (e) => {
 
     let dragonsWikiPageElement = await historyLinkPage(history.links.article);
     information__2.append(dragonsWikiPageElement);
+
+
+    let information__table__1 = document.querySelector("#information__table__1");
+    information__table__1.innerHTML = "";
+    let h3 = document.createElement("h3");
+    h3.textContent = "History event date";
+    let hr = document.createElement("hr");
+    information__table__1.append(h3, hr);
+  
+    let divp = document.createElement("div");
+    divp.classList.add("table__container__1");
+  
+    let div1 = document.createElement("div");
+    let span1 = document.createElement("span");
+    span1.textContent = "Event date utc";
+    let strong1 = document.createElement("strong");
+    strong1.textContent = `${history.event_date_utc}`;
+    div1.append(span1, strong1);
+  
+    let div2 = document.createElement("div");
+    let span2 = document.createElement("span");
+    span2.textContent = "Event date unix";
+    let strong2 = document.createElement("strong");
+    strong2.textContent = `${history.event_date_unix}`;
+    div2.append(span2, strong2);
+  
+    divp.append(div1, div2);
+    information__table__1.append(divp);
+
+    let information__table__2 = document.querySelector("#information__table__2");
+    information__table__2.innerHTML = "";
+    let h4 = document.createElement("h3");
+    h4.textContent = "History details";
+    let hr1 = document.createElement("hr");
+    information__table__2.append(h4, hr1);
+  
+    let divs= document.createElement("div");
+    divs.classList.add("table__container__2");
+  
+    let div8 = document.createElement("div");
+    let span8 = document.createElement("span");
+    span8.textContent = "Details:";
+    let strong8= document.createElement("strong");
+    strong8.textContent = `${history.details}`;
+    div8.append(span8, strong8);
+  
+    divs.append(div8);
+    information__table__2.append(divs)
 };
 
 export const paginationHistory = async(page=1, limit=3)=>{  
