@@ -121,6 +121,7 @@ import {
     landpadsTypePage,
     landpadsLocalityPage,
     landpadsRegionPage,
+    landpadsWikiPage
 } from "./information.js";
 
 
@@ -1007,6 +1008,12 @@ const getIDLandpads = async (e) => {
 
     let LandpadsRegionPageElement = await landpadsRegionPage(landpads.region);
     description__item.append(LandpadsRegionPageElement);
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let LandpadsWikiPageElement = await landpadsWikiPage(landpads.wikipedia);
+    information__2.append(LandpadsWikiPageElement);
 
 
 };
