@@ -138,7 +138,8 @@ import {
 import { 
     imageRockets,
     imageCrew,
-    imageLaunches
+    imageLaunches,
+    ImageLandpads
 } from "./card.js";
 
 import { 
@@ -496,7 +497,7 @@ const getAllIDCrew = async (e) => {
     console.log(crew);
 
     await nameCrew(crew.name);
-    await imageCrew([{ name: crew.name, image: crew.image }]);
+    await imageCrew([crew]);
 
     let description__item = document.querySelector("#description__item");
     description__item.innerHTML = "";
@@ -990,6 +991,7 @@ const getIDLandpads = async (e) => {
     console.log(landpads);
 
     await nameLandpads(landpads.name);
+    await ImageLandpads([landpads]);
 
     let description__item = document.querySelector("#description__item");
     description__item.innerHTML = "";
@@ -1025,23 +1027,23 @@ const getIDLandpads = async (e) => {
     img3.classList.add("imagen-paginacion-roadster");
     img3.style.position = "absolute";
     img3.style.top = "270px"; 
-    img3.style.left = "580px"; 
+    img3.style.left = "675px"; 
     img3.style.width = "300px"; 
     img3.style.height = "150px";
-    img3.style.marginTop = "85px";
+    img3.style.marginTop = "10px";
     img3.style.marginLeft = "300px";
     img3.style.borderRadius = "10%";
     sectionImage.appendChild(img3);
 
     let img4 = document.createElement("img");
-    img4.setAttribute("src", "storage/img/gif/purple.webp");
+    img4.setAttribute("src", "storage/img/gif/purple.webp"); 
     img4.classList.add("imagen-paginacion-roadster");
     img4.style.position = "absolute";
     img4.style.top = "270px"; 
-    img4.style.left = "-125px"; 
+    img4.style.left = "-230px"; 
     img4.style.width = "300px"; 
     img4.style.height = "150px";
-    img4.style.marginTop = "85px";
+    img4.style.marginTop = "10px";
     img4.style.marginLeft = "300px";
     img4.style.borderRadius = "10%";
     sectionImage.appendChild(img4);
