@@ -211,7 +211,19 @@ import {
     RoadsterMarsDKMPage,
     RoadsterMarsDMIPage,
     RoadsterWikiPage,
-    RoadsterYoutubePage
+    RoadsterYoutubePage,
+    StarlinkIdPage,
+    StarlinkVersionPage,
+    StarlinkCCSDSPage,
+    StarlinkCOMMENTPage,
+    StarlinkORIGINATORPage,
+    StarlinkOBJECTIDPage,
+    StarlinkCENTERNAMEPage,
+    StarlinkREFFRAMEPage,
+    StarlinkTYMESYSTEMPage,
+    StarlinkMEANPage,
+    StarlinkCLASSIFICATIONPage,
+    StarlinkCOUNTRYCODEPage
 } from "./information.js";
 
 
@@ -2623,6 +2635,44 @@ const getIDStarlink = async (e) => {
 
     await nameStarlink(starlink.spaceTrack.OBJECT_NAME);
 
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let StarlinkIdPageElement = await StarlinkIdPage(starlink.id);
+    description__item.append(StarlinkIdPageElement)
+
+    let StarlinkVersionPageElement = await StarlinkVersionPage(starlink.version);
+    description__item.append(StarlinkVersionPageElement)
+
+    let StarlinkCCSDSPageElement = await StarlinkCCSDSPage(starlink.spaceTrack.CCSDS_OMM_VERS);
+    description__item.append(StarlinkCCSDSPageElement)
+
+    let StarlinkCOMMENTPageElement = await StarlinkCOMMENTPage(starlink.spaceTrack.COMMENT);
+    description__item.append(StarlinkCOMMENTPageElement)
+
+    let StarlinkORIGINATORPageElement = await StarlinkORIGINATORPage(starlink.spaceTrack.ORIGINATOR);
+    description__item.append(StarlinkORIGINATORPageElement)
+
+    let StarlinkOBJECTIDPageElement = await StarlinkOBJECTIDPage(starlink.spaceTrack.OBJECT_ID);
+    description__item.append(StarlinkOBJECTIDPageElement)
+
+    let StarlinkCENTERNAMEPageElement = await StarlinkCENTERNAMEPage(starlink.spaceTrack.CENTER_NAME);
+    description__item.append(StarlinkCENTERNAMEPageElement)
+
+    let StarlinkREFFRAMEPageElement = await StarlinkREFFRAMEPage(starlink.spaceTrack.REF_FRAME);
+    description__item.append(StarlinkREFFRAMEPageElement)
+
+    let StarlinkTYMESYSTEMPageElement = await StarlinkTYMESYSTEMPage(starlink.spaceTrack.TIME_SYSTEM);
+    description__item.append(StarlinkTYMESYSTEMPageElement)
+
+    let StarlinkMEANPageElement = await StarlinkMEANPage(starlink.spaceTrack.MEAN_ELEMENT_THEORY);
+    description__item.append(StarlinkMEANPageElement)
+
+    let StarlinkCLASSIFICATIONPageElement = await StarlinkCLASSIFICATIONPage(starlink.spaceTrack.CLASSIFICATION_TYPE);
+    description__item.append(StarlinkCLASSIFICATIONPageElement)
+
+    let StarlinkCOUNTRYCODEPageElement = await StarlinkCOUNTRYCODEPage(starlink.spaceTrack.COUNTRY_CODE);
+    description__item.append(StarlinkCOUNTRYCODEPageElement)
 };
 
 export const paginationStarlink = async(page=1, limit=3)=>{  
