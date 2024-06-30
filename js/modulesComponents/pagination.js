@@ -223,7 +223,24 @@ import {
     StarlinkTYMESYSTEMPage,
     StarlinkMEANPage,
     StarlinkCLASSIFICATIONPage,
-    StarlinkCOUNTRYCODEPage
+    StarlinkCOUNTRYCODEPage,
+    StarlinkMEANMOTIONPage,
+    StarlinkECCENTRICITYPage,
+    StarlinkINCLINATIONPage,
+    StarlinkRAPage,
+    StarlinkARGPage,
+    StarlinkMEANANOMALYPage,
+    StarlinkEPHEMERISPage,
+    StarlinkNORADPage,
+    StarlinkELEMENTPage,
+    StarlinkREVPage,
+    StarlinkBSTARPage,
+    StarlinkMEANMDOTPage,
+    StarlinkMEANMDOOTPage,
+    StarlinkSEMIMAJORPage,
+    StarlinkPERIODPage,
+    StarlinkAPOAPSISPage,
+    StarlinkPERIAPSISPage
 } from "./information.js";
 
 
@@ -2673,6 +2690,63 @@ const getIDStarlink = async (e) => {
 
     let StarlinkCOUNTRYCODEPageElement = await StarlinkCOUNTRYCODEPage(starlink.spaceTrack.COUNTRY_CODE);
     description__item.append(StarlinkCOUNTRYCODEPageElement)
+
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let StarlinkMEANMOTIONPageElement = await StarlinkMEANMOTIONPage(starlink.spaceTrack.MEAN_MOTION);
+    information__2.append(StarlinkMEANMOTIONPageElement)
+
+    let StarlinkECCENTRICITYPageElement = await StarlinkECCENTRICITYPage(starlink.spaceTrack.ECCENTRICITY);
+    information__2.append(StarlinkECCENTRICITYPageElement)
+
+    let StarlinkINCLINATIONPageElement = await StarlinkINCLINATIONPage(starlink.spaceTrack.INCLINATION);
+    information__2.append(StarlinkINCLINATIONPageElement)
+
+    let StarlinkRAPageElement = await StarlinkRAPage(starlink.spaceTrack.RA_OF_ASC_NODE);
+    information__2.append(StarlinkRAPageElement)
+
+    let StarlinkARGPageElement = await StarlinkARGPage(starlink.spaceTrack.ARG_OF_PERICENTER);
+    information__2.append(StarlinkARGPageElement)
+
+    let StarlinkMEANANOMALYPageElement = await StarlinkMEANANOMALYPage(starlink.spaceTrack.MEAN_ANOMALY);
+    information__2.append(StarlinkMEANANOMALYPageElement)
+
+    let StarlinkEPHEMERISPageElement = await StarlinkEPHEMERISPage(starlink.spaceTrack.EPHEMERIS_TYPE);
+    information__2.append(StarlinkEPHEMERISPageElement)
+
+    let StarlinkNORADPageElement = await StarlinkNORADPage(starlink.spaceTrack.NORAD_CAT_ID);
+    information__2.append(StarlinkNORADPageElement)
+
+    let StarlinkELEMENTPageElement = await StarlinkELEMENTPage(starlink.spaceTrack.ELEMENT_SET_NO);
+    information__2.append(StarlinkELEMENTPageElement)
+
+    let StarlinkREVPageElement = await StarlinkREVPage(starlink.spaceTrack.REV_AT_EPOCH);
+    information__2.append(StarlinkREVPageElement)
+
+    let StarlinkBSTARPageElement = await StarlinkBSTARPage(starlink.spaceTrack.BSTAR);
+    information__2.append(StarlinkBSTARPageElement)
+
+    let StarlinkMEANMDOTPageElement = await StarlinkMEANMDOTPage(starlink.spaceTrack.MEAN_MOTION_DOT);
+    information__2.append(StarlinkMEANMDOTPageElement)
+
+    let StarlinkMEANMDOOTPageElement = await StarlinkMEANMDOOTPage(starlink.spaceTrack.MEAN_MOTION_DDOT);
+    information__2.append(StarlinkMEANMDOOTPageElement)
+
+    let StarlinkSEMIMAJORPageElement = await StarlinkSEMIMAJORPage(starlink.spaceTrack.SEMIMAJOR_AXIS);
+    information__2.append(StarlinkSEMIMAJORPageElement)
+
+    let StarlinkPERIODPageElement = await StarlinkPERIODPage(starlink.spaceTrack.PERIOD);
+    information__2.append(StarlinkPERIODPageElement)
+    
+    let StarlinkAPOAPSISPageElement = await StarlinkAPOAPSISPage(starlink.spaceTrack.APOAPSIS);
+    information__2.append(StarlinkAPOAPSISPageElement)
+
+    let StarlinkPERIAPSISPageElement = await StarlinkPERIAPSISPage(starlink.spaceTrack.PERIAPSIS);
+    information__2.append(StarlinkPERIAPSISPageElement)
+
+
 };
 
 export const paginationStarlink = async(page=1, limit=3)=>{  
