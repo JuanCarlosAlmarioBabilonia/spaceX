@@ -1963,4 +1963,121 @@ export const historyLinkPage  = async(links)=>{
     return div; 
 }
 
+// APARTADO DE LAUNCHPADS
+
+export const launchpadsIdPage  = async(id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:"
+    let small = document.createElement('small');
+    small.textContent = id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const launchpadsRocketsPage  = async(rockets)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Rockets:"
+    let small = document.createElement('small');
+    small.textContent = rockets
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const launchpadsFullNamePage  = async(full_name)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Full name:"
+    let small = document.createElement('small');
+    small.textContent = full_name
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const launchpadsLocalityPage  = async(locality)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Locality:"
+    let small = document.createElement('small');
+    small.textContent = locality
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const launchpadsRegionPage  = async(region)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Region:"
+    let small = document.createElement('small');
+    small.textContent = region
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
 

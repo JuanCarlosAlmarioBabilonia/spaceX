@@ -168,7 +168,12 @@ import {
     dragonsDiameterMPage,
     dragonsDiameterFPage,
     historyIdPage,
-    historyLinkPage
+    historyLinkPage,
+    launchpadsIdPage,
+    launchpadsRocketsPage,
+    launchpadsFullNamePage,
+    launchpadsLocalityPage,
+    launchpadsRegionPage
 } from "./information.js";
 
 
@@ -2045,6 +2050,25 @@ const getIDLaunchpads = async (e) => {
     console.log(launchpads);
 
     await nameLaunchpads(launchpads.name);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let launchapdsIdPageElement = await launchpadsIdPage(launchpads.id);
+    description__item.append(launchapdsIdPageElement)
+
+    let launchapdsRocketsPageElement = await launchpadsRocketsPage(launchpads.rockets);
+    description__item.append(launchapdsRocketsPageElement)
+
+    let launchapdsFullNamePageElement = await launchpadsFullNamePage(launchpads.full_name);
+    description__item.append(launchapdsFullNamePageElement)
+
+    let launchapdsLocalityPageElement = await launchpadsLocalityPage(launchpads.locality);
+    description__item.append(launchapdsLocalityPageElement)
+
+    let launchapdsRegionPageElement = await launchpadsRegionPage(launchpads.region);
+    description__item.append(launchapdsRegionPageElement)
+
 
 };
 
