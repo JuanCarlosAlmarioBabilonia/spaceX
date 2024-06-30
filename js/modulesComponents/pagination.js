@@ -185,7 +185,8 @@ import {
     imageCrew,
     imageLaunches,
     ImageLandpads,
-    imageShips
+    imageShips,
+    imageDragons
 } from "./card.js";
 
 import { 
@@ -1617,6 +1618,7 @@ const getIDDragons = async (e) => {
     console.log(dragons);
 
     await nameDragons(dragons.name);
+    await imageDragons(dragons.flickr_images);
 
     let description__item = document.querySelector("#description__item");
     description__item.innerHTML = "";
@@ -1780,6 +1782,47 @@ const getIDDragons = async (e) => {
   
     divs.append(div8);
     information__table__2.append(divs)
+
+    let sectionImage = document.querySelector("#section__information__1");
+
+    let img3 = document.createElement("img");
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img3.classList.add("imagen-paginacion-roadster");
+    img3.style.position = "absolute";
+    img3.style.top = "270px"; 
+    img3.style.left = "690px"; 
+    img3.style.width = "300px"; 
+    img3.style.height = "150px";
+    img3.style.marginTop = "10px";
+    img3.style.marginLeft = "300px";
+    img3.style.borderRadius = "10%";
+    sectionImage.appendChild(img3);
+
+    let img4 = document.createElement("img");
+    img4.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img4.classList.add("imagen-paginacion-roadster");
+    img4.style.position = "absolute";
+    img4.style.top = "195px"; 
+    img4.style.left = "-210px"; 
+    img4.style.width = "300px"; 
+    img4.style.height = "150px";
+    img4.style.marginTop = "85px";
+    img4.style.marginLeft = "300px";
+    img4.style.borderRadius = "10%";
+    sectionImage.appendChild(img4);
+
+    let img5 = document.createElement("img");
+    img5.setAttribute("src", "storage/img/gif/co.webp");
+    img5.classList.add("imagen-paginacion-roadster");
+    img5.style.position = "absolute";
+    img5.style.top = "300px"; 
+    img5.style.left = "-235px"; 
+    img5.style.width = "300px"; 
+    img5.style.height = "200px";
+    img5.style.marginTop = "-200px";
+    img5.style.marginLeft = "757px";
+    img5.style.borderRadius = "10%";
+    sectionImage.appendChild(img5);
 
 };
 
