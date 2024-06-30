@@ -121,7 +121,11 @@ import {
     landpadsTypePage,
     landpadsLocalityPage,
     landpadsRegionPage,
-    landpadsWikiPage
+    landpadsWikiPage,
+    ShipsIdPage,
+    ShipsTypePage,
+    ShipsHomePortPage,
+    ShipsActivePage
 } from "./information.js";
 
 
@@ -1182,6 +1186,23 @@ const getIDShips = async (e) => {
     console.log(ship);
 
     await nameShips(ship.name);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let ShipsIdPageElement = await ShipsIdPage(ship.id);
+    description__item.append(ShipsIdPageElement);
+
+    let ShipsTypePageElement = await ShipsTypePage(ship.type);
+    description__item.append(ShipsTypePageElement);
+
+    let ShipsHomePortPageElement = await ShipsHomePortPage(ship.home_port);
+    description__item.append(ShipsHomePortPageElement);
+
+    let ShipsActivePageElement = await ShipsActivePage(ship.active);
+    description__item.append(ShipsActivePageElement);
+
+    
 
 };
 
