@@ -136,7 +136,11 @@ import {
     CompanyEmployeesPage,
     CompanyVehiclesPage,
     CompanyLaunchSitesPage,
-    CompanyTestSitesPage
+    CompanyTestSitesPage,
+    companyLinkPage,
+    companyFlickrPage,
+    companyTwitterPage,
+    companyElonTwitterPage
 } from "./information.js";
 
 
@@ -1424,6 +1428,22 @@ export const paginationCompany = async() => {
 
     let companyTestSitesPageElement = await CompanyTestSitesPage(data.test_sites);
     description__item.append(companyTestSitesPageElement);
+
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let companyLinkPageElement = await companyLinkPage(data.links.website);
+    information__2.append(companyLinkPageElement);
+
+    let companyflickrPageElement = await companyFlickrPage(data.links.flickr);
+    information__2.append(companyflickrPageElement);
+
+    let companyTwitterPageElement = await companyTwitterPage(data.links.twitter);
+    information__2.append(companyTwitterPageElement);
+
+    let companyElonTwitterPageElement = await companyElonTwitterPage(data.links.elon_twitter);
+    information__2.append(companyElonTwitterPageElement);
 
 }
 
