@@ -174,7 +174,15 @@ import {
     launchpadsLocalityPage,
     launchpadsRegionPage,
     launchpadsTimezonePage,
-    launchpadsStatusPage
+    launchpadsStatusPage,
+    payloadsIdPage,
+    payloadsTypePage,
+    payloadsReusedPage,
+    payloadsOrbitPage,
+    payloadsReferenceSystemPage,
+    payloadsRegimePage,
+    payloadsMassKgPage,
+    payloadsMassLbsPage
 } from "./information.js";
 
 
@@ -2242,6 +2250,33 @@ const getIDPayloads = async (e) => {
     console.log(payloads);
 
     await namePayloads(payloads.name);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let payloadsIdPageElement = await payloadsIdPage(payloads.id);
+    description__item.append(payloadsIdPageElement)
+
+    let payloadsTypePageElement = await payloadsTypePage(payloads.type);
+    description__item.append(payloadsTypePageElement)
+
+    let payloadsReusedPageElement = await payloadsReusedPage(payloads.reused);
+    description__item.append(payloadsReusedPageElement)
+
+    let payloadsOrbitPageElement = await payloadsOrbitPage(payloads.orbit);
+    description__item.append(payloadsOrbitPageElement)
+
+    let payloadsReferenceSystemPageElement = await payloadsReferenceSystemPage(payloads.id);
+    description__item.append(payloadsReferenceSystemPageElement)
+
+    let payloadsRegimePageElement = await payloadsRegimePage(payloads.regime);
+    description__item.append(payloadsRegimePageElement)
+
+    let payloadsMassKgPageElement = await payloadsMassKgPage(payloads.mass_kg);
+    description__item.append(payloadsMassKgPageElement)
+
+    let payloadsMassLbsPageElement = await payloadsMassLbsPage(payloads.mass_lbs);
+    description__item.append(payloadsMassLbsPageElement)
 
 };
 
