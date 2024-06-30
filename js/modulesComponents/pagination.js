@@ -170,7 +170,6 @@ import {
     historyIdPage,
     historyLinkPage,
     launchpadsIdPage,
-    launchpadsRocketsPage,
     launchpadsFullNamePage,
     launchpadsLocalityPage,
     launchpadsRegionPage,
@@ -2061,8 +2060,6 @@ const getIDLaunchpads = async (e) => {
     let launchapdsIdPageElement = await launchpadsIdPage(launchpads.id);
     description__item.append(launchapdsIdPageElement)
 
-    let launchapdsRocketsPageElement = await launchpadsRocketsPage(launchpads.rockets);
-    description__item.append(launchapdsRocketsPageElement)
 
     let launchapdsFullNamePageElement = await launchpadsFullNamePage(launchpads.full_name);
     description__item.append(launchapdsFullNamePageElement)
