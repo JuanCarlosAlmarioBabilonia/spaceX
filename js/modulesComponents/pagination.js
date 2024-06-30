@@ -166,7 +166,8 @@ import {
     dragonsHeightMetersPage,
     dragonsHeightFeetPage,
     dragonsDiameterMPage,
-    dragonsDiameterFPage
+    dragonsDiameterFPage,
+    historyIdPage
 } from "./information.js";
 
 
@@ -1883,6 +1884,11 @@ const getIDHistory = async (e) => {
 
     await nameHistory(history.title);
 
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let historyIdPageElement = await historyIdPage(history.id);
+    description__item.append(historyIdPageElement);
 };
 
 export const paginationHistory = async(page=1, limit=3)=>{  
