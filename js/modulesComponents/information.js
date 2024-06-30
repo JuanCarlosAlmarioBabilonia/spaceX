@@ -2912,3 +2912,67 @@ export const RoadsterMarsDMIPage  = async(mars_distance_mi)=>{
     return div; 
 }
 
+export const RoadsterWikiPage  = async(wikipedia)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Wikipedia:"
+    let small = document.createElement('small');
+    divLast.append(h3, small);
+
+    let wiki = document.createElement('a');
+    wiki.textContent = "Click aqui para ver el articulo de wikipedia";
+    wiki.style.color = "white"; 
+    wiki.style.textDecoration = "underline"; 
+    wiki.href = wikipedia; 
+    wiki.style.fontSize = "14px";
+    wiki.target = "_blank";
+
+    divLast.appendChild(wiki);
+    div.append(divFirst, divLast);
+
+    return div;
+}
+
+export const RoadsterYoutubePage  = async(video)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Video:"
+    let small = document.createElement('small');
+    divLast.append(h3, small);
+
+    let wiki = document.createElement('a');
+    wiki.textContent = "Click aqui para ver el video";
+    wiki.style.color = "white"; 
+    wiki.style.textDecoration = "underline"; 
+    wiki.href = video; 
+    wiki.style.fontSize = "14px";
+    wiki.target = "_blank";
+
+    divLast.appendChild(wiki);
+    div.append(divFirst, divLast);
+
+    return div;
+}
+

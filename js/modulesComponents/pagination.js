@@ -209,7 +209,9 @@ import {
     RoadsterEarthDKMPage,
     RoadsterEarthDMIPage,
     RoadsterMarsDKMPage,
-    RoadsterMarsDMIPage
+    RoadsterMarsDMIPage,
+    RoadsterWikiPage,
+    RoadsterYoutubePage
 } from "./information.js";
 
 
@@ -2492,6 +2494,16 @@ export const paginationRoadster = async() => {
 
     let RoadsterMarsDMIPageElement = await RoadsterMarsDMIPage(data.mars_distance_mi);
     description__item.append(RoadsterMarsDMIPageElement)
+
+
+    let information__2 = document.querySelector("#information__2")
+    information__2.innerHTML = ``;
+
+    let RoadsterWikiPageElement = await RoadsterWikiPage(data.wikipedia);
+    information__2.append(RoadsterWikiPageElement)
+
+    let RoadsterYoutubePageElement = await RoadsterYoutubePage(data.video);
+    information__2.append(RoadsterYoutubePageElement)
 
 }
 
