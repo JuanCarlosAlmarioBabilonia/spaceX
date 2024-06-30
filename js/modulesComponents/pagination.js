@@ -994,6 +994,9 @@ const getIDLandpads = async (e) => {
     let description__item = document.querySelector("#description__item");
     description__item.innerHTML = "";
 
+    let LandpadsIdPageElement = await landpadsIdPage(landpads.id);
+    description__item.append(LandpadsIdPageElement);
+
     let LandpadsFullNamePageElement = await landpadsFullNamePage(landpads.full_name);
     description__item.append(LandpadsFullNamePageElement);
 
@@ -1014,6 +1017,47 @@ const getIDLandpads = async (e) => {
 
     let LandpadsWikiPageElement = await landpadsWikiPage(landpads.wikipedia);
     information__2.append(LandpadsWikiPageElement);
+
+    let sectionImage = document.querySelector("#section__information__1");
+
+    let img3 = document.createElement("img");
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img3.classList.add("imagen-paginacion-roadster");
+    img3.style.position = "absolute";
+    img3.style.top = "270px"; 
+    img3.style.left = "580px"; 
+    img3.style.width = "300px"; 
+    img3.style.height = "150px";
+    img3.style.marginTop = "85px";
+    img3.style.marginLeft = "300px";
+    img3.style.borderRadius = "10%";
+    sectionImage.appendChild(img3);
+
+    let img4 = document.createElement("img");
+    img4.setAttribute("src", "storage/img/gif/purple.webp");
+    img4.classList.add("imagen-paginacion-roadster");
+    img4.style.position = "absolute";
+    img4.style.top = "270px"; 
+    img4.style.left = "-125px"; 
+    img4.style.width = "300px"; 
+    img4.style.height = "150px";
+    img4.style.marginTop = "85px";
+    img4.style.marginLeft = "300px";
+    img4.style.borderRadius = "10%";
+    sectionImage.appendChild(img4);
+
+    let img5 = document.createElement("img");
+    img5.setAttribute("src", "storage/img/gif/co.webp");
+    img5.classList.add("imagen-paginacion-roadster");
+    img5.style.position = "absolute";
+    img5.style.top = "270px"; 
+    img5.style.left = "-230px"; 
+    img5.style.width = "300px"; 
+    img5.style.height = "150px";
+    img5.style.marginTop = "-200px";
+    img5.style.marginLeft = "757px";
+    img5.style.borderRadius = "10%";
+    sectionImage.appendChild(img5);
 
 
 };
