@@ -195,7 +195,8 @@ import {
     imageLaunches,
     ImageLandpads,
     imageShips,
-    imageDragons
+    imageDragons,
+    imageLaunchpads
 } from "./card.js";
 
 import { 
@@ -2052,6 +2053,7 @@ const getIDLaunchpads = async (e) => {
     console.log(launchpads);
 
     await nameLaunchpads(launchpads.name);
+    await imageLaunchpads([launchpads])
 
     let description__item = document.querySelector("#description__item");
     description__item.innerHTML = "";
@@ -2080,6 +2082,109 @@ const getIDLaunchpads = async (e) => {
 
     let launchapdsStatusPageElement = await launchpadsStatusPage(launchpads.status);
     information__2.append(launchapdsStatusPageElement);
+
+
+    let information__table__1 = document.querySelector("#information__table__1");
+    information__table__1.innerHTML = "";
+    let h3 = document.createElement("h3");
+    h3.textContent = "Launchpads data";
+    let hr = document.createElement("hr");
+    information__table__1.append(h3, hr);
+  
+    let divp = document.createElement("div");
+    divp.classList.add("table__container__1");
+  
+    let div1 = document.createElement("div");
+    let span1 = document.createElement("span");
+    span1.textContent = "Latitude";
+    let strong1 = document.createElement("strong");
+    strong1.textContent = `${launchpads.latitude}`;
+    div1.append(span1, strong1);
+  
+    let div2 = document.createElement("div");
+    let span2 = document.createElement("span");
+    span2.textContent = "Longitude";
+    let strong2 = document.createElement("strong");
+    strong2.textContent = `${launchpads.longitude}`;
+    div2.append(span2, strong2);
+
+    let div3 = document.createElement("div");
+    let span3 = document.createElement("span");
+    span3.textContent = "Launch attempts";
+    let strong3 = document.createElement("strong");
+    strong3.textContent = `${launchpads.launch_attempts}`;
+    div3.append(span3, strong3);
+
+    let div4 = document.createElement("div");
+    let span4 = document.createElement("span");
+    span4.textContent = "Launch successes";
+    let strong4 = document.createElement("strong");
+    strong4.textContent = `${launchpads.launch_successes}`;
+    div4.append(span4, strong4);
+  
+    divp.append(div1, div2, div3, div4);
+    information__table__1.append(divp);
+
+    let information__table__2 = document.querySelector("#information__table__2");
+    information__table__2.innerHTML = "";
+    let h4 = document.createElement("h3");
+    h4.textContent = "Launchpads details";
+    let hr1 = document.createElement("hr");
+    information__table__2.append(h4, hr1);
+  
+    let divs= document.createElement("div");
+    divs.classList.add("table__container__2");
+  
+    let div8 = document.createElement("div");
+    let span8 = document.createElement("span");
+    span8.textContent = "Details:";
+    let strong8= document.createElement("strong");
+    strong8.textContent = `${launchpads.details}`;
+    div8.append(span8, strong8);
+  
+    divs.append(div8);
+    information__table__2.append(divs)
+
+    let sectionImage = document.querySelector("#section__information__1");
+
+    let img3 = document.createElement("img");
+    img3.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img3.classList.add("imagen-paginacion-roadster");
+    img3.style.position = "absolute";
+    img3.style.top = "270px"; 
+    img3.style.left = "675px"; 
+    img3.style.width = "300px"; 
+    img3.style.height = "150px";
+    img3.style.marginTop = "10px";
+    img3.style.marginLeft = "300px";
+    img3.style.borderRadius = "10%";
+    sectionImage.appendChild(img3);
+
+    let img4 = document.createElement("img");
+    img4.setAttribute("src", "storage/img/gif/purple.webp"); 
+    img4.classList.add("imagen-paginacion-roadster");
+    img4.style.position = "absolute";
+    img4.style.top = "270px"; 
+    img4.style.left = "-230px"; 
+    img4.style.width = "300px"; 
+    img4.style.height = "150px";
+    img4.style.marginTop = "10px";
+    img4.style.marginLeft = "300px";
+    img4.style.borderRadius = "10%";
+    sectionImage.appendChild(img4);
+
+    let img5 = document.createElement("img");
+    img5.setAttribute("src", "storage/img/gif/co.webp");
+    img5.classList.add("imagen-paginacion-roadster");
+    img5.style.position = "absolute";
+    img5.style.top = "270px"; 
+    img5.style.left = "-230px"; 
+    img5.style.width = "300px"; 
+    img5.style.height = "150px";
+    img5.style.marginTop = "-200px";
+    img5.style.marginLeft = "757px";
+    img5.style.borderRadius = "10%";
+    sectionImage.appendChild(img5);
 
 
 };
