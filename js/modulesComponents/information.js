@@ -952,3 +952,236 @@ export const ShipsLinkPage  = async(link)=>{
 
     return div; 
 }
+
+// APARTADO DE COMPANY
+
+export const CompanyIdPage  = async(id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:"
+    let small = document.createElement('small');
+    small.textContent = id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyFounderPage  = async(founder)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Founder:"
+    let small = document.createElement('small');
+    small.textContent = founder
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyAdressPage  = async(adress)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Adress:"
+    let small = document.createElement('small');
+    small.textContent = adress
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyCityPage  = async(city)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "City:"
+    let small = document.createElement('small');
+    small.textContent = city
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyStatePage  = async(state)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "State:"
+    let small = document.createElement('small');
+    small.textContent = state
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyFoundedPage  = async(founded)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Founded:"
+    let small = document.createElement('small');
+    small.textContent = founded
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyEmployeesPage  = async(employees)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Employees:"
+    let small = document.createElement('small');
+    small.textContent = employees
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyVehiclesPage  = async(vehicles)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Vehicles:"
+    let small = document.createElement('small');
+    small.textContent = vehicles
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyLaunchSitesPage  = async(launch_sites)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launch sites:"
+    let small = document.createElement('small');
+    small.textContent = launch_sites
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const CompanyTestSitesPage  = async(text_sites)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/gif/ton.webp")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Text sites:"
+    let small = document.createElement('small');
+    small.textContent = text_sites
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+

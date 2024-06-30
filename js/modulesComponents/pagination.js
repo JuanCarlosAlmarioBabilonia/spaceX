@@ -126,7 +126,17 @@ import {
     ShipsTypePage,
     ShipsHomePortPage,
     ShipsActivePage,
-    ShipsLinkPage
+    ShipsLinkPage,
+    CompanyIdPage,
+    CompanyFounderPage,
+    CompanyAdressPage,
+    CompanyCityPage,
+    CompanyStatePage,
+    CompanyFoundedPage,
+    CompanyEmployeesPage,
+    CompanyVehiclesPage,
+    CompanyLaunchSitesPage,
+    CompanyTestSitesPage
 } from "./information.js";
 
 
@@ -1381,6 +1391,40 @@ export const paginationCompany = async() => {
     await clear()
 
     await nameCompany(data.name);
+
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+
+    let companyIdPageElement = await CompanyIdPage(data.id);
+    description__item.append(companyIdPageElement);
+
+    let companyFounderPageElement = await CompanyFounderPage(data.founder);
+    description__item.append(companyFounderPageElement);
+
+    let companyAdressPageElement = await CompanyAdressPage(data.headquarters.address);
+    description__item.append(companyAdressPageElement);
+
+    let companyCityPageElement = await CompanyCityPage(data.headquarters.city);
+    description__item.append(companyCityPageElement);
+
+    let companyStatePageElement = await CompanyStatePage(data.headquarters.state);
+    description__item.append(companyStatePageElement);
+
+    let companyFoundedPageElement = await CompanyFoundedPage(data.founded);
+    description__item.append(companyFoundedPageElement);
+
+    let companyEmployeesPageElement = await CompanyEmployeesPage(data.employees);
+    description__item.append(companyEmployeesPageElement);
+
+    let companyVehiclesPageElement = await CompanyVehiclesPage(data.vehicles);
+    description__item.append(companyVehiclesPageElement);
+
+    let companyLaunchSitesPageElement = await CompanyLaunchSitesPage(data.launch_sites);
+    description__item.append(companyLaunchSitesPageElement);
+
+    let companyTestSitesPageElement = await CompanyTestSitesPage(data.test_sites);
+    description__item.append(companyTestSitesPageElement);
+
 }
 
 // Apartado DRagons
